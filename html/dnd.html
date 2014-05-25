@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>DnD</title>
+        <style type="text/css" media="screen">
+            #drag-handler {
+                position: absolute;
+                float: left;
+                width: 100px;
+                height: 100px;
+                background-color: pink;
+            }
+
+            #drag-handler.over {
+                background-color: red;
+            }
+
+            #dropper.over {
+                background-color: #CCC;
+                border: 1px dashed black;
+            }
+
+            #dropper {
+                border: 1px solid transparent;
+                position: absolute;
+                float: left;
+                left: 400px;
+                width: 300px;
+                height: 300px;
+                background-color: gray;
+            }
+
+            [draggable] {
+                -moz-user-select: none;
+                -khtml-user-select: none;
+                -webkit-user-select: none;
+                user-select: none;
+                /* Required to make elements draggable in old WebKit */
+                -khtml-user-drag: element;
+                -webkit-user-drag: element;
+            }
+        </style>
+
+        <script type="text/javascript" charset="utf-8">
+            function ready(){
+                var dh = document.getElementById("drag-handler");
+                // init drag
+                dh.ondragstart = function(ev){
+                    ev.dataTransfer.setData("text/html", dh.innerHTML);
+                    ev.dataTransfer.effectAllowed = "moveCopy";
+                    // ev.dataTransfer.dropEffect = "move";
+                    dh.style.opacity = 0.5;
+                    console.log("%c dragger drag start!", 'color: blue');
+                }
+
+                dh.ondrag = function(ev){
+                    // dh.style.top = ev.clientY + 'px';
+                    // dh.style.left = ev.clientX + 'px';
+                    // console.log("draggin!", ev.view,  ev.dataTransfer.getData("Text"), arguments);
+                }
+
+                // not set droppable
+                dh.ondragover = function(){
+                    // return false; 
+                }
+
+                dh.ondragenter = function(){
+                    dh.classList.add('over');
+                    return false;
+                }
+
+                dh.ondragleave = function(){
+                    dh.classList.remove('over');
+                    console.log("dragger drag leave!");
+                }
+
+                dh.ondrop = function(ev){
+                    ev.stopPropagation();
+                    ev.preventDefault();
+                    dh.classList.remove('over');
+                    dh.style.opacity = 1;
+                    console.log("dragger ondrop", ev.dataTransfer.getData("text/html"));
+                }
+
+                dh.ondragend = function(ev){
+                    // dh.style.top = ev.clientY - 100 + "px";
+                    // dh.style.left = ev.clientX + "px";
+                    var text =((Math.random()*1000) % 1000).toString();
+                    var text_node = document.createTextNode(text);
+                    var random_el = document.createElement("div");
+                    dh.classList.remove('over');
+                    dh.style.opacity = 1;
+                    random_el.appendChild(text_node);
+                    // document.body.appendChild(random_el);
+                    console.log("dragger drag end!", ev.dataTransfer.dropEffect, arguments);
+                }
+
+                // window.x = dh;
+
+                // set up dropper
+                var dp = document.getElementById("dropper");
+
+                dp.ondrop = function(ev){
+                    ev.stopPropagation();
+                    ev.preventDefault();
+                    dp.classList.remove('over');
+                    console.log("%c file", "background: yellow;", ev.dataTransfer.files);
+                    console.log("%c dropper on drop", "color: orange;", ev) 
+                }
+
+                // must for droppable
+                dp.ondragover = function(ev){
+                    ev.dataTransfer.dropEffect = "link";
+                    ev.stopPropagation();
+                    ev.preventDefault();
+                }
+
+                dp.ondrag = function(){}
+
+                dp.ondragenter = function(ev){
+                    ev.dataTransfer.dropEffect = "link";
+                    dp.classList.add('over');
+                    console.warn("dropper on drag enter");
+                }
+
+                dp.ondragleave = function(){
+                    dp.classList.remove('over');
+                    console.warn("dropper on drag leave") 
+                    return false;
+                }
+
+                dp.ondragend = function(){
+                    dp.classList.remove('over');
+                    console.log("%c dropper on end", "color: orange;") 
+                }
+            }
+
+        </script>
+    </head>
+    <body onLoad="ready()">
+        <div id='drag-handler' draggable >Dragger</div>
+
+        <div id='dropper'>Dropper</div>
+    </body>
+</html>

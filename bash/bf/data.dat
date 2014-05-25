@@ -1,0 +1,238 @@
+Fencer Vargas   Fire    **  2   12  3   5
+Burning Vargas  Fire    *** 4   40  3   5
+Fire King Vargas    Fire    ****    8   60  4   6
+Fire God Vargas Fire    5*  10  80  6   6
+Selena  Water   **  2   12  2   4
+Ice Selena  Water   *** 4   40  2   5
+Ice Queen Selena    Water   ****    8   60  4   7
+Ice God Selena  Water   5*  10  80  4   8
+Pikeman Lance   Earth   **  2   12  3   4
+Vine Pike Lance Earth   *** 4   40  4   5
+Earth Pike Lance    Earth   ****    8   60  4   5
+Nature God Lance    Earth   5*  10  80  4   6
+Warrior Eze Thunder **  2   12  1   2
+Thunder Eze Thunder *** 4   40  1   2
+Thunder King Eze    Thunder ****    8   60  2   5
+Thunder God Eze Thunder 5*  10  80  5   7
+Squire Atro Light   **  2   12  1   2
+Knight Atro Light   *** 4   40  1   3
+Holy Knight Atro    Light   ****    8   60  2   4
+Goddess Atro    Light   5*  10  80  3   5
+Iron Magress    Dark    **  2   12  1   3
+Heavy Magress   Dark    *** 4   40  1   4
+Black Magress   Dark    ****    8   60  2   4
+Death Magress   Dark    5*  10  80  3   6
+Beast Zegar Fire    **  3   30  2   2
+Rage Beast Zegar    Fire    *** 5   40  4   5
+Fire Beast Zegar    Fire    ****    9   60  7   7
+Zephu   Water   **  3   30  3   4
+Knight Zephu    Water   *** 5   40  4   5
+Dragoon Zephu   Water   ****    9   60  5   6
+Archer Lario    Earth   **  3   30  3   3
+Marksman Lario  Earth   *** 5   40  3   3
+Hawkeye Lario   Earth   ****    9   60  6   6
+Advisor Weiss   Thunder **  3   30  3   B
+Strategist Weiss    Thunder *** 5   40  5   B
+Commander Weiss Thunder ****    9   60  6   B
+Luna    Light   **  3   30  2   2
+Sunshine Luna   Light   *** 5   40  3   3
+Holy Queen Luna Light   ****    9   60  4   4
+Mifune  Dark    **  3   30  2   2
+Samurai Mifune  Dark    *** 5   40  3   3
+God Blade Mifune    Dark    ****    9   60  4   4
+Burny   Fire    *   1   10      
+King Burny  Fire    **  3   30      
+Squirty Water   *   1   10      
+King Squirty    Water   **  3   30      
+Mossy   Earth   *   1   10      
+King Mossy  Earth   **  3   30      
+Sparky  Thunder *   1   10      
+King Sparky Thunder **  3   30      
+Glowy   Light   *   1   10      
+King Glowy  Light   **  3   30      
+Gloomy  Dark    *   1   10      
+King Gloomy Dark    **  3   30      
+Witch Liza  Fire    *   2   15  3   3
+Warlock Liza    Fire    **  4   30  5   5
+Priest Merith   Water   *   2   15  3   H
+Healer Merith   Water   **  4   30  5   H
+Geomancer Claris    Earth   *   2   15  3   H
+Time Mage Claris    Earth   **  4   30  5   H
+Dancer May  Thunder *   2   15  3   H
+High Dancer May Thunder **  4   30  5   H
+Sage Mimir  Light   *   2   15  3   H
+Light LordMimir Light   **  4   30  5   H
+Sorceress Lily  Dark    *   2   15  3   4
+Magician Lily   Dark    **  4   30  5   6
+Goblin  Fire    *   2   12  1   4
+Redcap  Fire    **  4   30  1   5
+Merman  Water   *   2   12  2   4
+Sahuagin    Water   **  4   30  4   3
+Mandragora  Earth   *   2   12  3   B
+Polevik Earth   **  4   30  4   B
+Harpy   Thunder *   2   12  3   B
+Aero    Thunder **  4   30  6   B
+Angel   Light   *   2   12  1   2
+Archangel   Light   **  4   30  2   3
+Skeleton    Dark    *   2   12  2   1
+Skeleton King   Dark    **  4   30  2   3
+Thief Leon  Fire    **  3   30  4   4
+Head Thief Leon Fire    *** 6   40  6   6
+Pirate Verica   Water   **  3   30  2   2
+Plunderer Verica    Water   *** 6   40  4   4
+Bandit Zaza Earth   **  3   30  4   4
+Head Bandit Zaza    Earth   *** 6   40  5   5
+Sky Pirate Grafl    Thunder **  3   30  3   3
+Sky Boss Grafl  Thunder *** 6   40  6   9
+Orthos  Fire    **  2   30  2   2
+Cerberus    Fire    *** 5   40  5   3
+Ramia   Water   **  2   30  2   2
+Scylla  Water   *** 5   40  4   4
+Fairy   Earth   **  2   30  3   H
+Titania Earth   *** 5   40  4   H
+Minotaur    Thunder **  2   30  1   2
+Cyclops Thunder *** 5   40  5   3
+Unicorn Light   **  3   30  5   6
+Pegasus Light   *** 6   40  5   7
+Medusa  Dark    **  3   30  3   4
+Zahhak  Dark    *** 6   40  5   4
+Salamander  Fire    **  2   30  3   B
+Ifrit   Fire    *** 4   40  6   B
+Rantoul Water   **  2   30  3   H
+Legtos  Water   *** 4   40  5   H
+Trent   Earth   **  2   30  3   3
+Ent Earth   *** 4   40  5   5
+Sylph   Thunder **  2   30  3   B
+Djin    Thunder *** 4   40  5   B
+Priestess Maria Light   **  2   30  3   H
+Angel Maria Light   *** 4   40  5   H
+Lilin   Dark    **  2   30  6   B
+Succubus    Dark    *** 4   40  6   B
+Firedrake   Fire    *** 5   40  3   3
+Dragon Graven   Fire    ****    8   60  5   5
+Undine  Water   *** 5   40  3   B
+Siren   Water   ****    8   60  5   B
+Dryad   Earth   *** 5   40  3   B
+High Elf    Earth   ****    8   60  5   B
+Thunderbird Thunder *** 5   40  3   5
+Great Falcon Ziz    Thunder ****    8   60  4   5
+Valkyrie    Light   *** 5   40  5   4
+Sky Hero Athena Light   ****    8   60  6   7
+Vampire Dark    *** 5   40  3   3
+Lich    Dark    ****    8   60  5   5
+Knight Agni Fire    *** 5   40  8   8
+Fire Knight Agni    Fire    ****    8   60  9   9
+Knight Sergio   Water   *** 5   40  2   5
+Water Ruler Sergio  Water   ****    8   60  5   7
+Princess Lidlith    Earth   *** 5   40  6   6
+Queen Lidlith   Earth   ****    8   60  8   8
+Sky Knight Falma    Thunder *** 5   40  5   5
+Sky King Falma  Thunder ****    8   60  7   7
+Cowboy Heidt    Light   *** 5   40  5   5
+Holy Shot Heidt Light   ****    8   60  10  10
+Shida   Dark    *** 5   40  6   6
+Garroter Shida  Dark    ****    8   60  8   8
+Phoenix Fire    *** 5   40  3   H
+Lava Phoenix    Fire    ****    8   60  4   H
+God Phoenix Fire    5*  12  80  6   H
+Leviathan   Water   *** 5   40  3   4
+Loch Ness   Water   ****    8   60  4   5
+Malnaplus   Water   5*  12  80  5   6
+Great Tree Alneu    Earth   *** 5   40  3   H
+World Tree Altro    Earth   ****    8   60  4   H
+God Tree Eltri  Earth   5*  12  80  6   H
+Behemoth    Thunder *** 5   40  1   2
+King Behemoth   Thunder ****    8   60  3   3
+Alpha Behemoth  Thunder 5*  12  80  3   4
+Wyvern  Light   *** 5   40  3   4
+Bahamut Light   ****    8   60  4   5
+Rameldria   Light   5*  12  80  5   6
+Memetes Dark    *** 5   40  3   4
+Hell King Hades Dark    ****    8   60  4   5
+Death God Lodaga    Dark    5*  12  80  4   6
+Lava    Fire    *** 5   40  3   4
+Fire Knight Lava    Fire    ****    8   60  4   5
+Fire God Lava   Fire    5*  12  80  7   10
+Captain Mega    Water   *** 5   40  3   4
+War Captain Mega    Water   ****    8   60  4   5
+Commander Mega  Water   5*  12  80  6   6
+Gunner Douglas  Earth   *** 5   40  8   10
+Gun King Douglas    Earth   ****    8   60  10  15
+Gun God Douglas Earth   5*  12  80  12  20
+Emilia  Thunder *** 5   40  4   5
+Princess Emilia Thunder ****    8   60  4   5
+Goddess Emilia  Thunder 5*  12  80  6   7
+Knight Will Light   *** 5   40  1   2
+Holy Knight Will    Light   ****    8   60  3   4
+God Knight Will Light   5*  12  80  5   6
+Alice   Dark    *** 5   40  3   3
+Scythe Alice    Dark    ****    8   60  3   7
+Scythe God Alice    Dark    5*  12  80  5   8
+Fire Nyph   Fire    *   2   1       
+Water Nyph  Water   *   2   1       
+Earth Nymph Earth   *   2   1       
+Thunder Nymph   Thunder *   2   1       
+Light Nymph Light   *   2   1       
+Dark Nyph   Dark    *   2   1       
+Fire Spirit Fire    **  5   1       
+Water Spirit    Water   **  5   1       
+Earth Spirit    Earth   **  5   1       
+Thunder Spirit  Thunder **  5   1       
+Light Spirit    Light   **  5   1       
+Dark Spirit Dark    **  5   1       
+Fire Idol   Fire    *** 8   1       
+Water Idol  Water   *** 8   1       
+Earth Idol  Earth   *** 8   1       
+Thunder Idol    Thunder *** 8   1       
+Light Idol  Light   *** 8   1       
+Dark Idol   Dark    *** 8   1       
+Fire Totem  Fire    ****    10  1       
+Water Totem Water   ****    10  1       
+Earth Totem Earth   ****    10  1       
+Thunder Totem   Thunder ****    10  1       
+Light Totem Light   ****    10  1       
+Dark Totem  Dark    ****    10  1       
+Jewel Ghost Light   **  3   1       
+Jewel King  Light   *** 6   1       
+Jewel God   Light   ****    9   1       
+Metal Ghost Dark    **  3   1       
+Metal King  Dark    *** 6   1       
+Metal God   Dark    ****    9   1       
+Mimc    Dark    *** 2   1       
+Bat Mimic   Dark    ****    6   1       
+Blacksmith Galant   Fire    **  4   30  1   4
+Bruiser Galant  Fire    *** 6   40  1   5
+God Arm Galant  Fire    ****    10  60  1   6
+Stya    Water   **  4   30  5   5
+Snow Blade Stya Water   *** 6   40  7   8
+Frost Queen Stya    Water   ****    10  60  10  10
+Boxer Nemia Earth   **  4   30  3   3
+Brawler Nemia   Earth   *** 6   40  4   4
+Gaia Fist Nemia Earth   ****    10  60  5   5
+Zeln    Thunder **  4   30      
+Spark Kick Zeln Thunder *** 6   40      
+Thunder Kick Zeln   Thunder ****    10  60      
+Traveler Alma   Light   **  4   30  3   4
+Adventurer Alma Light   *** 6   40  4   5
+Hero  Alma  Light   ****    10  60  5   7
+Ninja Oboro Dark    **  4   30  3   4
+Assasin Oboro   Dark    *** 6   40  4   5
+Shadow Oboro    Dark    ****    10  60  5   6
+Lancia  Fire    *** 5   40      H
+Hot Chef Lancia Fire    ****    8   60      H
+Head Chef Lancia    Fire    5*  12  80      H
+Elimo   Water   *** 5   40      H
+Royal Elimo Water   ****    8   60      H
+Genius Elimo    Water   5*  12  80      H
+Pixy Leore  Earth   *** 5   40      6
+Pixy Royal Leore    Earth   ****    8   60      7
+Pixy King Leore Earth   5*  12  80      10
+Tinkerer Elulu  Thunder *** 5   40      2
+Inventor Elulu  Thunder ****    8   60      3
+Bolt Mallet Elulu   Thunder 5*  12  80      4
+Knight Aem  Light   *** 5   40      7
+Champion Aem    Light   ****    8   60      7
+Holy Master Aem Light   5*  12  80      8
+Lemia   Dark    *** 5   40      5
+Necromancer Lemia   Dark    ****    8   60      6
+Soul Keeper Lemia   Dark    5*  12  80      8
