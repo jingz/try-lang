@@ -1,0 +1,2 @@
+class KlassB:
+    pass

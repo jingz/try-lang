@@ -1,0 +1,2 @@
+class KlassA:
+    pass
