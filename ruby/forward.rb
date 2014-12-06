@@ -11,7 +11,5 @@ class Fw
 
 end
 
-if __FILE__ == $0
-  x = Fw.new
-  puts x.dm(2) # 3
-end
+x = Fw.new
+puts x.dm(2)

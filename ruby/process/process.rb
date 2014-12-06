@@ -1,7 +1,5 @@
-#!/home/jing/.rvm/rubies/ruby-1.9.2-p290/bin/ruby
-
 cid = fork {
-e File.open("test.pid", "w"){ |f| f.write $$; f.close }
+  File.open("test.pid", "w"){ |f| f.write $$; f.close }
   puts "Im child #{$$}"
   i = 0
   while(true) do
@@ -12,6 +10,8 @@ e File.open("test.pid", "w"){ |f| f.write $$; f.close }
   end
   exit
 }
+
+abort
 Process.detach cid
 puts "Im parent #{$$}"
 x = 0
