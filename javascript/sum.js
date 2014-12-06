@@ -11,5 +11,5 @@ function arraySum(list) {
     return sum;
 }
 
-console.log(arraySum([[1,2,3],4,5]));
-console.log(arraySum([4,5,[1,2,3]]));
+console.log(arraySum([[1,2,3],4,5]));  //=> 15
+console.log(arraySum([4,5,[1,2,3]]));  //=> 15
