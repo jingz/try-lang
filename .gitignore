@@ -1,3 +1,8 @@
 bash/dream_dir/*
 bash/bf/html/*
 ruby/zeromq/*
+node/node_modules/*
+*.pyc
+*node_modules/*
+*venv*
+*.DS_Store
