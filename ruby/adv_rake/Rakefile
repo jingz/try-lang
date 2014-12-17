@@ -1,0 +1,6 @@
+task :default => :html
+task :html => %W[a.md b.md]
+
+rule ".html" => ".md" do |t|
+  sh "echo #{t.name} #{t.source}"
+end
