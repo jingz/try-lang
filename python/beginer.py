@@ -32,7 +32,7 @@ mylist.append(4)
 mylist.append(5)
 mylistb = [91, 92, 93]
 mylistc = [1, 2, 3, 4, 5]
-print mylist 
+print mylist
 print mylist[3]
 print mylist + mylistb
 print mylistb * 2
@@ -75,6 +75,7 @@ class FirstClass:
     adict['third'] = "3rd properties in dict"
     def fn(self):
         print "printing in fn with var %s" % self.var_a
+
 o = FirstClass()
 o.fn()
 print "value of var_a is %s" % o.var_a
