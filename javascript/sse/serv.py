@@ -2,6 +2,7 @@
 from flask import Flask, Response, stream_with_context
 import random
 import time
+import datetime as dt
 
 app = Flask(__name__)
 
@@ -19,28 +20,32 @@ def home():
         </div>
 
         <script>
-            var es = new EventSource("/stream");
-            var customDiv = document.getElementById('custom');
-            var nondefinedDiv = document.getElementById('nondefined');
+            setTimeout(function(){
+                var es = new EventSource("/stream");
+                var customDiv = document.getElementById('custom');
+                var nondefinedDiv = document.getElementById('nondefined');
 
-            es.addEventListener('custom_event', function(e){
-                var el = document.createElement('b')
-                el.innerHTML = e.data + "<br/>";
-                customDiv.appendChild(el);
-            }, false);
+                es.addEventListener('custom_event', function(e){
+                    var el = document.createElement('b')
+                    var now = new Date();
+                    var milli = "000" + now.getMilliseconds();
+                    el.innerHTML = e.data + " :: " + now.getSeconds() + "." + milli.slice(-3) + "<br/>";
+                    customDiv.appendChild(el);
+                }, false);
 
-            es.onopen = function(){ console.log("start connnect SSE!"); }
+                es.onopen = function(){ console.log("start connnect SSE!"); }
 
-            es.onmessage = function(e){ 
-                var el = document.createElement('b')
-                el.innerHTML = e.data + "<br/>";
-                nondefinedDiv.appendChild(el);
-            }
+                es.onmessage = function(e){ 
+                    var el = document.createElement('b')
+                    el.innerHTML = e.data + "<br/>";
+                    nondefinedDiv.appendChild(el);
+                }
 
-            // if error or done
-            es.onerror = function(e){ 
-                console.log('error', e); es.close(); 
-            }
+                // if error or done
+                es.onerror = function(e){ 
+                    console.log('error', e); es.close(); 
+                }
+            }, 3000);
         </script>
     '''
 
@@ -52,16 +57,17 @@ def hello():
         # https://developer.mozilla.org/en-US/docs/Server-sent_events/Using_server-sent_events
         i = 0
         while i < 100:
-            time.sleep(0.1)
+            time.sleep(0.2)
             # sent custom_event type format with id that handle message lost
             # received by `custom_event`
 
             yield "event: custom_event\n"
             yield ("id: %s\n" % (i+1))
-            yield ("data: { \"randnumber\": %s }\n\n" % (random.randint(100, 999)))
+            now = dt.datetime.now()
+            yield ("data: { \"randnumber\": %s, \"time\": %s }\n\n" % (random.randint(100, 999), now))
 
             # sent non-defined event type -> received by `onmessage`
-            yield ("data: { \"randnumber\": %s }\n\n" % (random.randint(100, 999)))
+            # yield ("data: { \"randnumber\": %s }\n\n" % (random.randint(100, 999)))
             i += 1
 
     return Response(stream_with_context(stream_content()), 
