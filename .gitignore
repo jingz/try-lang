@@ -4,5 +4,7 @@ ruby/zeromq/*
 node/node_modules/*
 *.pyc
 *node_modules/*
+javascript/phantomjs/*.png
 *venv*
 *.DS_Store
+.DS_Store
