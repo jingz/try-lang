@@ -5,22 +5,22 @@ import Cocoa
 // Constaints (let)
 
 let greeting = "Hello, World !"
-println(greeting);
+println(greeting);  //=>  Hello, World !
 
 var firstVar = "the first variable"
-println(firstVar)
+println(firstVar)  //=>  the first variable
 
 let ไทย = "Thai Name"
-println(ไทย)
+println(ไทย)  //=>  Thai Name
 let pi = 3.414
-println(pi)
+println(pi)  //=>  3.414
 let `class` = "override reserved word"
-println(`class`);
+println(`class`);  //=>  override reserved word
 let explicitDouble: Double = 77 
-println(explicitDouble)
+println(explicitDouble)  //=>  77.0
 let casting = "Hello, PI is \(pi)"
 // cannot covert pi to String
-println(casting);
+println(casting);  //=>  Hello, PI is 3.414
 
 // Build Specific values
 #if false
@@ -28,7 +28,7 @@ println(casting);
 #else
     let buildValue = 3
 #endif
-println("Build value is \(buildValue)")
+println("Build value is \(buildValue)")  //=>  Build value is 3
 
 /* 
    Optionals are a swift language feature that allows you 
@@ -43,7 +43,7 @@ var someOptString: Optional<String> = "optional"
 
 if someOptionalString != nil {
     if someOptionalString!.hasPrefix("opt") {
-        println("has the prefix opt")
+        println("has the prefix opt")  //=>  has the prefix opt
     }
 
     let empty = someOptionalString?.isEmpty
@@ -62,13 +62,13 @@ if let someOptionalStringConst = someOptionalString {
 
 // AnyObject type is == id
 var anyObjectVar: AnyObject = 7
-println(anyObjectVar)
+println(anyObjectVar)  //=>  7
 anyObjectVar = "changed to string"
-println(anyObjectVar)
+println(anyObjectVar)  //=>  changed to string
 
 // Array
 var shoppingList = ["catfist", "water", "milk"]
-println(shoppingList[2])
+println(shoppingList[2])  //=>  milk
 let emptyString = [String]() // let == immutable
 let emptyArray = Array<String>()
 var emptyMutableArr = [String]()
@@ -79,14 +79,14 @@ var occupations = [
     "Kaylee": "Mechanic"
 ]
 
-println(occupations["Kaylee"])
+println(occupations["Kaylee"])  //=>  Optional("Mechanic")
 occupations["Jayne"] = "Wizard"
 let emptyDict = [String: Float]()
 let emptyDict2 = Dictionary<String, Float>()
 var emptyDict3 = [String: Float]()
 
 let arr = [1, 2, 4, 5, 6]
-println(arr)
+println(arr)  //=>  [1, 2, 4, 5, 6]
 for v in arr {
     // loop thru arr
 }
@@ -98,18 +98,18 @@ for (name, occ) in occupations {
 for i in -1...shoppingList.count {
     // loop thru range
 }
-println(shoppingList[0...1])
+println(shoppingList[0...1])  //=>  [catfist, water]
 
 // while
 var i = 1
 while i < 10 {
     i++
 }
-println(i)
+println(i)  //=>  10
 
 do {
     if i == 20 {
-        println(i)
+        println(i)  //=>  20
     }
     i++
 } while i < 21
@@ -135,7 +135,7 @@ func greeting(name: String, day: String) -> String {
     return "Hello \(name), Enjoy \(day)."
 }
 var res: AnyObject = greeting("Jing", "Friday");
-println(res);
+println(res);  //=>  Hello Jing, Enjoy Friday.
 
 // *** Interesting stack overflow about naming arguments
 // * http://stackoverflow.com/questions/24045890/why-does-a-function-call-require-the-parameter-name-in-swift
@@ -149,7 +149,7 @@ func extraGreeting(#requiredName: String, day d: String) -> String {
     return "Hello \(requiredName), Enjoy extra running on \(d) !!"
 }
 res = extraGreeting(requiredName: "Jing", day: "Sunday");
-println(res)
+println(res)  //=>  Hello Jing, Enjoy extra running on Sunday !!
 
 // returning tubles
 func randomTuple() -> (Double, Double, Double) {
@@ -157,14 +157,14 @@ func randomTuple() -> (Double, Double, Double) {
     return (Double(r), 4.3, 5.3)
 }
 
-println(randomTuple())
+println(randomTuple())  //=>  (1629857068.0, 4.3, 5.3)
 var (a, b, c) = randomTuple()
-println(a)
-println(b)
-println(c)
+println(a)  //=>  1909597147.0
+println(b)  //=>  4.3
+println(c)  //=>  5.3
 var t = randomTuple()
-println(t.0)
-println(t.2)
+println(t.0)  //=>  3020276998.0
+println(t.2)  //=>  5.3
 
 // args ... 3 dots
 func setup(args: Int...) -> (String, String) {
@@ -172,7 +172,7 @@ func setup(args: Int...) -> (String, String) {
     var n = args.count
     return ("First args is \(first)", "number of memebers is \(n)")
 }
-println(setup(1,2,3,5,6))
+println(setup(1,2,3,5,6))  //=>  (First args is 1, number of memebers is 5)
 
 // passing and returning func
 // return pattern is (types of args, type of returning)
@@ -183,7 +183,7 @@ func makeIncrementer() -> ((Int, Int) -> Int) {
     return addOne
 }
 var inc = makeIncrementer()
-println(inc(3, 2));
+println(inc(3, 2));  //=>  7
 
 // passing reference
 func swapInt(inout a: Int, inout b: Int) {
@@ -195,17 +195,17 @@ func swapInt(inout a: Int, inout b: Int) {
 var iA = 6
 var iB = 9
 swapInt(&iA, &iB);
-println(iA)
-println(iB)
+println(iA)  //=>  9
+println(iB)  //=>  6
 
 // Closures
 var numbers = [1, 2, 3]
 numbers = numbers.map({ number in 4 * number })
-println(numbers)
+println(numbers)  //=>  [4, 8, 12]
 numbers = sorted(numbers){ $0 > $1 }
-println(numbers)
+println(numbers)  //=>  [12, 8, 4]
 numbers = sorted(numbers, <)
-println(numbers)
+println(numbers)  //=>  [4, 8, 12]
 
 // Object And Class
 // Structures have an auto-generated (implicit) designated initializer
@@ -219,7 +219,7 @@ struct NamesTable {
 
 let nt = NamesTable(names: ["John", "Jane"], pets: ["Cat", "Dog"])
 let sentence = nt[1]
-println(sentence)
+println(sentence)  //=>  Jane having Dog
 
 public class Shape {
     var name: String
@@ -240,7 +240,7 @@ public class Shape {
     }
 }
 var s = Shape(name: "Square")
-println(s.display())
+println(s.display())  //=>  This shape is Square
 
 // inheritance
 class Square: Shape {
@@ -263,13 +263,13 @@ class Square: Shape {
 }
 
 var ss = Square(sideLength: 5, name: "Block")
-println(ss.display())
+println(ss.display())  //=>  This Block square having area 25.0 sq.
 
 func yordered(#aa: String, #bb: String) -> String {
     return "ok \(aa) \(bb)"
 }
 
-println(yordered(aa: "B", bb: "A"))
+println(yordered(aa: "B", bb: "A"))  //=>  ok B A
 
 import Darwin // for PI
 class Circle: Shape {
@@ -292,7 +292,7 @@ class Circle: Shape {
 }
 
 var cir = Circle(radius: 5, name: "wheel")
-println(cir.display())
+println(cir.display())  //=>  This wheel circle having area 78.54.
 
 class EquilateralTriangle: Shape {
     var sideLength: Double
@@ -314,9 +314,9 @@ class EquilateralTriangle: Shape {
 }
 
 var et = EquilateralTriangle(sideLength: 4, name: "Pri")
-println(et.display());
+println(et.display());  //=>  An equilateral triangle with sides of length 4.0
 et.perimeter = 9
-println(et.display());
+println(et.display());  //=>  An equilateral triangle with sides of length 3.0
 
 class TriangleAndSquare {
     var triangle: EquilateralTriangle {
@@ -334,9 +334,9 @@ class TriangleAndSquare {
 }
 
 var ts = TriangleAndSquare(size: 5, name: "Mixer")
-println(ts.square.sideLength)
+println(ts.square.sideLength)  //=>  5.0
 ts = TriangleAndSquare(size: 15, name: "Mixer")
-println(ts.triangle.sideLength)
+println(ts.triangle.sideLength)  //=>  15.0
 
 // Enumerations and Structures
 enum Rank: Int {
@@ -374,14 +374,14 @@ enum Rank: Int {
 
 let ace = Rank.Ace
 let aceRawValue = ace.rawValue
-println(ace.display())
-println(ace.rawValue);
+println(ace.display())  //=>  ace
+println(ace.rawValue);  //=>  1
 let queen = Rank.Queen
-println(queen.rawValue)
-println(ace.compareWith(Rank.Queen))
+println(queen.rawValue)  //=>  12
+println(ace.compareWith(Rank.Queen))  //=>  -1
 // Convertible
 let fromRaw = Rank(rawValue: 12)
-println(fromRaw?.display())
+println(fromRaw?.display())  //=>  Optional("queen")
 
 enum Suit {
     case Spades, Hearts, Diamonds, Clubs
@@ -410,8 +410,8 @@ enum Suit {
 }
 
 let asuit = Suit.Hearts
-println(asuit.display())
-println(asuit.color())
+println(asuit.display())  //=>  hearts
+println(asuit.color())  //=>  red
 
 // Struct
 /*** The most importance differences between structures and classes
@@ -426,7 +426,7 @@ struct Card {
 }
 
 var card = Card(rank: .Three, suit: .Spades);
-println(card.display());
+println(card.display());  //=>  3 of spades
 
 enum ServerResponse {
     case Result(String, String)
@@ -447,7 +447,7 @@ switch warning {
     case let .Warning(warn):
         serveRes = "Warning... \(warn)"
 }
-println(serveRes)
+println(serveRes)  //=>  Warning... There are something out of scope.
 
 // Protocol
 protocol AProtocol {
@@ -466,7 +466,7 @@ class SimpleClass: AProtocol {
 
 var simclass = SimpleClass()
 simclass.adjust()
-println(simclass.description)
+println(simclass.description)  //=>  This a simple class. adjust called
 
 // struct with protocol
 struct SimpleStruct: AProtocol {
@@ -478,7 +478,7 @@ struct SimpleStruct: AProtocol {
 
 var simstruct = SimpleStruct()
 simstruct.adjust()
-println(simstruct.description)
+println(simstruct.description)  //=>  This is a structure. adjust structure
 
 // enum with protocol
 // ** experimental : http://stackoverflow.com/questions/24011170/how-to-make-an-enum-conform-to-a-protocol-in-swift
@@ -505,4 +505,94 @@ enum SimpleEnum: AProtocol {
 
 var simenum = SimpleEnum.Base
 simenum.adjust()
-println(simenum.description)
+println(simenum.description)  //=>  adjusted
+
+// Extension
+extension Int: AProtocol {
+    var display: String {
+        return "The number \(self)"
+    }
+
+    mutating func adjust() {
+        self += 99
+    }
+}
+
+var ii: Int = 1
+println(ii.display)  //=>  The number 1
+ii.adjust()
+println(ii.display)  //=>  The number 100
+
+extension Double {
+    // absolute
+    var abs: Double {
+        if self < 0 {
+            return -self
+        } else {
+            return self
+        }
+    }
+}
+
+var dd: Double = -19.99
+println(dd.abs)  //=>  19.99
+
+let pt: AProtocol = simclass
+println(pt.description)  //=>  This a simple class. adjust called
+
+// Generic
+
+func repeat<ItemType>(item: ItemType, items: Int) -> [ItemType] {
+    var res = [ItemType]()
+    for i in 1...items {
+        res.append(item)
+    }
+    return res
+}
+println(repeat("repeated word!", 4))  //=>  [repeated word!, repeated word!, repeated word!, repeated word!]
+println(repeat(9, 3))  //=>  [9, 9, 9]
+
+enum OptionalValue<T> {
+    case None
+    case Some(T)
+}
+
+var possibleInteger: OptionalValue<Int> = .None
+println(possibleInteger)  //=>  (Enum Value)
+possibleInteger = .Some(100)
+println(possibleInteger)  //=>  (Enum Value)
+
+func anyCommonElements <T, U where T: SequenceType, U: SequenceType, 
+                                   T.Generator.Element: Equatable,
+                                   T.Generator.Element == U.Generator.Element> (lhs: T, rhs: U) -> Bool {
+    for lhsItem in lhs {
+        for rhsItem in rhs {
+            if lhsItem == rhsItem {
+                return true
+            }
+        }
+    }
+    return false
+}
+
+println(anyCommonElements([1,2,3], [2]))  //=>  true
+println(anyCommonElements([4,3,5], [2]))  //=>  false
+
+// experimental : http://stackoverflow.com/questions/24027271/use-a-function-to-find-common-elements-in-two-sequences-in-swift
+func findAnyCommon <T, U where T: SequenceType, U: SequenceType, 
+                               T.Generator.Element: Equatable,
+                               T.Generator.Element == U.Generator.Element> (l: T, r: U) -> Array<T.Generator.Element> {
+                                    var res = Array<T.Generator.Element>()
+                                    for _l in l {
+                                        for _r in r {
+                                            if _l == _r {
+                                                res.append(_l)
+                                            }
+                                        }
+                                    }
+
+                                    return res
+                               }
+
+println(findAnyCommon([4, 5, 6], [5, 6, 7]))  //=>  [5, 6]
+
