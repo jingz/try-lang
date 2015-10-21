@@ -471,7 +471,7 @@ class Person(Human):
     
 
 p = Person('test')
-print p.name, p  #=> test <__main__.Person object at 0x1077a6e10>
+print p.name, p  #=> test <__main__.Person object at 0x10e7c7290>
 print p.say('hello')  #=> I'm saying hello
 # *** p.__feeling raise AttributeError: 'Person' object has no attribute '__feeling'
 print p.feeling  #=> Good
@@ -563,7 +563,7 @@ print b  #=> [5, 6, 7, 8, 9, 10]
 
 ### Generator Expression
 g = (x*2 for x in range(1, 10))
-print g  #=> <generator object <genexpr> at 0x10778ee60>
+print g  #=> <generator object <genexpr> at 0x10e7a57d0>
 print sum(g)  #=> 90
 
 ### Decorators

@@ -10,3 +10,4 @@ t2 = dt.datetime.now();
 diff = (t2 - t1)
 print diff
 print diff.microseconds
+print diff.milliseconds

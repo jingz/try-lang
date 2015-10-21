@@ -8,3 +8,4 @@ javascript/phantomjs/*.png
 *venv*
 *.DS_Store
 .DS_Store
+.ipynb_*

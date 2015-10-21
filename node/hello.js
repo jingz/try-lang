@@ -1,11 +1,17 @@
-var hello = 'Hello my friend';
-console.log(hello);                  //=> Hello my friend
+var message = "Hello World!"
+console.log(message)
 
-var number = 1;
-console.log(number);                 //=> 1
+var v = 1.1;
+console.log(v, typeof v)
 
-number += 9;
-console.log(number, typeof number);  //=> 10 'number'
+v += 'convert ot string';
+console.log(v, typeof v);
 
-number += ""
-console.log(number, typeof number);
+function hello() {
+    return "Greeting My Friend.!"
+}
+
+console.log(hello());
+console.log(new Date());
+
+console.log("what is this");
