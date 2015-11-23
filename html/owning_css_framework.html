@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Owning CSS Framework</title>
+        <style type="text/css" media="screen">
+            custom-framework custom-layout {
+                margin-left: 100px;
+            }
+
+            custom-framework x-layout {
+                margin-left: 200px;
+                border: 2px;
+            }
+
+            custom-framework > custom-layout > button {
+                color: red;
+            }
+
+            custom-framework button[b] {
+                background-color: blue;
+            }
+
+            custom-framework button[expand] {
+                height: 3em;
+            }
+        </style>
+    </head>
+    <body>
+        <custom-framework>
+            <custom-layout>
+                <custom-block>
+                    <form>
+                        <fieldset id="Legend of Form">
+                            <legend>Legend of Form</legend>
+                        
+                            
+                    <button expand>Button in custom layout</button>
+                    <input type='test' placeholder='Exmaple Input'/>
+                    <br/>
+                    <select>
+                        <option> first </option>
+                        <option> second </option>
+                        <option> third </option>
+                    </select>
+                    <br/>
+                    <input type='checkbox' name='xr' checked />Agree?
+                    </fieldset>
+                    <input type='radio' name='r' value='green' />green
+                    <input type='radio' name='r' value='red' />red
+                    </form>
+                </custom-block>
+            </custom-layout>
+        </custom-framework>
+        
+        <br/>
+        <br/>
+
+        <custom-framework>
+            <x-layout>
+                <custom-block>
+                    <button>BUTTON in X layout</button>
+                </custom-block>
+            </x-layout>
+        </custom-framework>
+
+        <br/>
+        <br/>
+
+
+        <button>NORMAL BUTTON</button>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Font Face</title>
+    </head>
+        <style type="text/css" media="screen">
+        @font-face {
+            font-family: THSarabun; 
+            /* src: local("THSarabun"), url("/Users/jing/play/try-lang/html/fonts/THSarabun.ttf") format('truetype');  */
+            src: local("xxxxxxxxxxxxx"), url("./fonts/THSarabun.ttf") format('truetype');
+        }
+
+        @font-face {
+            font-family: Thonburi;
+            src: local("LcThonburi"), url("./fonts/Thonburi.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: Fahkwang;
+            src: local("Fahkwang"), url("./fonts/Fahkwang.ttf") format("truetype");
+        }
+
+        .font-thonburi {
+            font-family: Thonburi;
+        }
+
+        .font-fahkwang {
+            font-family: Fahkwang;
+        }
+
+        .font-thsarabun {
+            font-family: THSarabun;
+        }
+
+        </style>
+    <body>
+        <p class="font-thsarabun">
+        <b>THSarabun</b><br/>
+          The CSS Fonts Module Level 3 (http://www.w3.org/TR/css3-fonts/) currently has Working Draft status and probably won’t become a recommendation any time soon. 
+          <i>Most of the spec has already been implemented in modern browsers (with a couple of exceptions, which I’ll cover later), so you can consider it pretty safe to use.              </i>
+        </p>
+        <p class="font-thonburi">
+        <b>Thonburi</b><br/>
+          The CSS Fonts Module Level 3 (http://www.w3.org/TR/css3-fonts/) currently has Working Draft status and probably won’t become a recommendation any time soon. 
+          <i>Most of the spec has already been implemented in modern browsers (with a couple of exceptions, which I’ll cover later), so you can consider it pretty safe to use.              </i>
+        </p>
+
+        <p class="font-fahkwang">
+            <b>Fahkwang</b><br/>
+          The CSS Fonts Module Level 3 (http://www.w3.org/TR/css3-fonts/) currently has Working Draft status and probably won’t become a recommendation any time soon. 
+          <i>Most of the spec has already been implemented in modern browsers (with a couple of exceptions, which I’ll cover later), so you can consider it pretty safe to use.              </i>
+        </p>
+    </body>
+</html>
