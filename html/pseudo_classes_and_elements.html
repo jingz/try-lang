@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Pseudo Classes and Pseudo Elements</title>
+    <style type="text/css" media="screen">
+        .box { float: left; margin-left: 10px; }
+
+        li:first-child { color: orange !important; }
+        li:last-child { color: pink !important; }
+
+        li:nth-child(3) { color: green; }
+        li:nth-child(4n) { color: red !important; }
+        li:nth-child(even) { color: brown; }
+        li:nth-child(2n+1) { color: blue; } /* equal to odd */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>nth-child</h2>
+        <ul id="example-list">
+            <li>item 001</li>
+            <li>item 002</li>
+            <li>item 003</li>
+            <li>item 004</li>
+            <li>item 005</li>
+            <li>item 006</li>
+            <li>item 007</li>
+            <li>item 008</li>
+            <li>item 009</li>
+            <li>item 010</li>
+            <li>item 011</li>
+            <li>item 012</li>
+            <li>item 013</li>
+            <li>item 014</li>
+            <li>item 015</li>
+            <li>item 016</li>
+            <li>item 017</li>
+            <li>item 018</li>
+            <li>item 019</li>
+            <li>item 020</li>
+            <li>item 021</li>
+            <li>item 022</li>
+            <li>item 023</li>
+            <li>item 024</li>
+            <li>item 025</li>
+            <li>item 026</li>
+            <li>item 027</li>
+            <li>item 028</li>
+            <li>item 029</li>
+            <li>item 030</li>
+        </ul>
+    </div>
+
+
+    <style type="text/css" media="screen">
+        p:nth-of-type(even) { font-weight: bold; }
+    </style>
+    <div class="box">
+        <h2>nth-of-type</h2>
+        <p>example of p tag</p>
+        <p>example of p tag</p>
+        <p>example of p tag</p>
+        <p>example of p tag</p>
+        <p>example of p tag</p>
+    </div>
+
+
+    <style type="text/css" media="screen">
+        /* no sibling of the same element */
+        p:only-of-type { font-style: italic; } 
+        /* no sibling of element */
+        p:only-child { text-decoration: underline; } 
+    </style>
+    <div class="box">
+        <h3>Only Child</h3>
+        <blockquote>
+            <p>this is p tag that is a child.</p>
+        </blockquote>
+        <a href="#target-example">Link to Target -></a>
+    </div>
+
+    <style type="text/css" media="screen">
+        /* it will be applied when the link is clicked */
+        #target-example:target {
+            color: red;
+        }
+    </style>
+    <div id="target-wrapper" >
+        <p id="target-example">Target Content 
+        referenced </p>
+    </div>
+
+
+    <style type="text/css" media="screen">
+        /* empty will be applied td with empty content or element*/
+        td:empty {
+            background-color: red;
+        }
+
+        /* for mozilar selection */
+        .table p::-moz-selection {
+            color: white;
+            background-color: blue;
+        }
+
+        .table > p::first-letter {
+            font-size: 2em;
+        }
+
+        .table > p::first-line {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .table > p::after {
+            content: "This is content from Pesudo-element CSS3 ::after";
+            color: red;
+        }
+    </style>
+    <div class="table">
+        <table>
+            <tr>
+                <td> items </td>
+                <td></td>
+                <td> items </td>
+            </tr>
+            <tr>
+                <td><span></span></td>
+                <td> items </td>
+                <td> items </td>
+            </tr>
+            <tr>
+                <td> items </td>
+                <td> items </td>
+                <td> items </td>
+            </tr>
+            <tr>
+                <td> items </td>
+                <td> items </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> items </td>
+                <td> items </td>
+                <td> items </td>
+            </tr>
+        </table>
+
+        <p>
+        CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1.<br/>
+        It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations,<br/>
+        as well as new layouts like multi-columns, flexible box or grid layouts.
+        </p>
+    </div>
+</body>
+</html>
