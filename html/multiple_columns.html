@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Multiple Columns</title>
+        <style type="text/css" media="screen">
+        div[class*='-3'] { -moz-column-count: 3; }
+        div.col-width-example {
+            -moz-column-width: 150px;
+            width: 1000px;
+        }
+
+        .wid-table-content {
+            padding: 0.2em;
+        }
+
+        .wid-table-content .lay-column {
+            /* -moz-column-width: 200px; */
+            /* -moz-column-count: 5px; */
+            /* width: 1000px;  */
+            -moz-columns: 200px 5;
+            -moz-column-gap: 1.3em;
+            -moz-column-span: all;
+        }
+
+        .lay-column img {
+            border: 2px solid blue;
+            -moz-break-before: avoid;
+            -moz-column-span: 2;
+        }
+
+        .lay-column h2 {
+            -moz-break-before: column;
+        }
+
+        .wid-table-content .lay-column.\| {
+            -moz-column-rule-color: red;
+            -moz-column-rule-style: solid;
+            -moz-column-rule-width: 1px;
+        }
+
+        .wid-table-content .lay-column.\|\| {
+            -moz-column-rule-color: red;
+            -moz-column-rule-style: double;
+            -moz-column-rule-width: 0.3em;
+        }
+
+        .\|-3{
+            -moz-columns: 300px 3 !important;
+        }
+
+        .wid-table-content p {
+            text-indent: 1.5em;
+            text-align: justify;
+        }
+
+        .wid-table-content p.hl {
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+         <div class="col-3">
+             <p>Formally, there is no CSS3 standard per se . Each module being standardized independently, the standard CSS consists of CSS2.1 amended and extended by the completed modules, not necessary all with the same level number. At each point of time, a snapshot of the CSS standard can be defined, listing CSS2.1 and the mature modules.
+             The W3 consortium periodically publishes such snapshots, like in 2007 or 2010.
+             Though today no module with a level greater than 3 is standardized, this will change in the future. Some modules, like Selectors 4 or CSS Borders and Backgrounds Level 4 already have an Editor's Draft, though they haven't yet reached the First Published Working Draft status. 
+             </p>
+         </div>
+         <hr/>
+         <div class="col-width-example">
+             <p>Formally, there is no CSS3 standard per se . Each module being standardized independently, the standard CSS consists of CSS2.1 amended and extended by the completed modules, not necessary all with the same level number. At each point of time, a snapshot of the CSS standard can be defined, listing CSS2.1 and the mature modules.
+             The W3 consortium periodically publishes such snapshots, like in 2007 or 2010.
+             Though today no module with a level greater than 3 is standardized, this will change in the future. Some modules, like Selectors 4 or CSS Borders and Backgrounds Level 4 already have an Editor's Draft, though they haven't yet reached the First Published Working Draft status. 
+             </p>
+         </div>
+         <hr/>
+         <div class="wid-table-content">
+             <div class="lay-column">
+                 <p>Formally, there is no CSS3 standard per se . Each module being standardized independently, the standard CSS consists of CSS2.1 amended and extended by the completed modules, not necessary all with the same level number. At each point of time, a snapshot of the CSS standard can be defined, listing CSS2.1 and the mature modules.
+                 The W3 consortium periodically publishes such snapshots, like in 2007 or 2010.
+                 Though today no module with a level greater than 3 is standardized, this will change in the future. Some modules, like Selectors 4 or CSS Borders and Backgrounds Level 4 already have an Editor's Draft, though they haven't yet reached the First Published Working Draft status. 
+                 The W3 consortium periodically publishes such snapshots, like in 2007 or 2010.
+                 Though today no module with a level greater than 3 is standardized, this will change in the future. Some modules, like Selectors 4 or CSS Borders and Backgrounds Level 4 already have an Editor's Draft, though they haven't yet reached the First Published Working Draft status. 
+                 </p>
+                 <p class='hl'> Justification is only really recommended if you have absolute control over your content, as it places irregular spaces between your words and can actually decrease readability unless you hyphenate correctly. (You can add soft hyphens using the HTML code &shy;.) Figure 7-5 shows the example text once more, but here I’ve set the text to justify and inserted soft hyphens into longer words so they break nicely and don’t cause too many irregular spaces between words.  </p>
+                 <p> These values provide, in my opinion, the most readable presentation of text, although using them does require more work from the content author; adding soft hyphens has to be done manually, which takes time, and when new content is added, you have to recheck the formatting to make sure that no errors were introduced.  </p>
+             </div>
+         </div>
+         <hr/>
+         <div class="wid-table-content">
+             <div class="lay-column || |">
+                 <p>Formally, there is no CSS3 standard per se . Each module being standardized independently, the standard CSS consists of CSS2.1 amended and extended by the completed modules, not necessary all with the same level number. At each point of time, a snapshot of the CSS standard can be defined, listing CSS2.1 and the mature modules.
+                 The W3 consortium periodically publishes such snapshots, like in 2007 or 2010.
+                 The second property, column-rule, draws a line, similar to a border, equi- distantly between columns. The syntax for column-rule is actually shorthand for three subproperties: column-rule-width, column-rule-style, and column-rule-color. These subproperties take values in exactly the same way as their equivalent border-* properties from CSS2. Here’s the syntax:
+                 Though today no module with a level greater than 3 is standardized, this will change in the future. Some modules, like Selectors 4 or CSS Borders and Backgrounds Level 4 already have an Editor's Draft, though they haven't yet reached the First Published Working Draft status. 
+                 </p>
+                 <p> Justification is only really recommended if you have absolute control over your content, as it places irregular spaces between your words and can actually decrease readability unless you hyphenate correctly. (You can add soft hyphens using the HTML code &shy;.) Figure 7-5 shows the example text once more, but here I’ve set the text to justify and inserted soft hyphens into longer words so they break nicely and don’t cause too many irregular spaces between words.  </p>
+                 <p> These values provide, in my opinion, the most readable presentation of text, although using them does require more work from the content author; adding soft hyphens has to be done manually, which takes time, and when new content is added, you have to recheck the formatting to make sure that no errors were introduced.  </p>
+             </div>
+             <div class="lay-column |">
+                 <p>Formally, there is no CSS3 standard per se . Each module being standardized independently, the standard CSS consists of CSS2.1 amended and extended by the completed modules, not necessary all with the same level number. At each point of time, a snapshot of the CSS standard can be defined, listing CSS2.1 and the mature modules.
+                 The W3 consortium periodically publishes such snapshots, like in 2007 or 2010.
+                 The second property, column-rule, draws a line, similar to a border, equi- distantly between columns. The syntax for column-rule is actually shorthand for three subproperties: column-rule-width, column-rule-style, and column-rule-color. These subproperties take values in exactly the same way as their equivalent border-* properties from CSS2. Here’s the syntax:
+                 Though today no module with a level greater than 3 is standardized, this will change in the future. Some modules, like Selectors 4 or CSS Borders and Backgrounds Level 4 already have an Editor's Draft, though they haven't yet reached the First Published Working Draft status. 
+                 </p>
+                 <p> Justification is only really recommended if you have absolute control over your content, as it places irregular spaces between your words and can actually decrease readability unless you hyphenate correctly. (You can add soft hyphens using the HTML code &shy;.) Figure 7-5 shows the example text once more, but here I’ve set the text to justify and inserted soft hyphens into longer words so they break nicely and don’t cause too many irregular spaces between words.  </p>
+                 <p> These values provide, in my opinion, the most readable presentation of text, although using them does require more work from the content author; adding soft hyphens has to be done manually, which takes time, and when new content is added, you have to recheck the formatting to make sure that no errors were introduced.  </p>
+             </div>
+             <div class="lay-column break">
+                 <p>Formally, there is no CSS3 standard per se . Each module being standardized independently, the standard CSS consists of CSS2.1 amended and extended by the completed modules, not necessary all with the same level number. At each point of time, a snapshot of the CSS standard can be defined, listing CSS2.1 and the mature modules.
+                 The W3 consortium periodically publishes such snapshots, like in 2007 or 2010.
+                 The second property, column-rule, draws a line, similar to a border, equi- distantly between columns. The syntax for column-rule is actually shorthand for three subproperties: column-rule-width, column-rule-style, and column-rule-color. These subproperties take values in exactly the same way as their equivalent border-* properties from CSS2. Here’s the syntax:
+                 <img src="./images/face-tiger.jpg" width="350px" height='300px'/>
+                 Though today no module with a level greater than 3 is standardized, this will change in the future. Some modules, like Selectors 4 or CSS Borders and Backgrounds Level 4 already have an Editor's Draft, though they haven't yet reached the First Published Working Draft status. 
+                 </p>
+                 <h2>Head Breaking</h2>
+                 <p> Justification is only really recommended if you have absolute control over your content, as it places irregular spaces between your words and can actually decrease readability unless you hyphenate correctly. (You can add soft hyphens using the HTML code &shy;.) Figure 7-5 shows the example text once more, but here I’ve set the text to justify and inserted soft hyphens into longer words so they break nicely and don’t cause too many irregular spaces between words.  </p>
+                 <p> These values provide, in my opinion, the most readable presentation of text, although using them does require more work from the content author; adding soft hyphens has to be done manually, which takes time, and when new content is added, you have to recheck the formatting to make sure that no errors were introduced.  </p>
+             </div>
+             <div class="lay-column |-3">
+                 <p>Formally, there is no CSS3 standard per se . Each module being standardized independently, the standard CSS consists of CSS2.1 amended and extended by the completed modules, not necessary all with the same level number. At each point of time, a snapshot of the CSS standard can be defined, listing CSS2.1 and the mature modules.
+                 The W3 consortium periodically publishes such snapshots, like in 2007 or 2010.
+                 The second property, column-rule, draws a line, similar to a border, equi- distantly between columns. The syntax for column-rule is actually shorthand for three subproperties: column-rule-width, column-rule-style, and column-rule-color. These subproperties take values in exactly the same way as their equivalent border-* properties from CSS2. Here’s the syntax:
+                 Though today no module with a level greater than 3 is standardized, this will change in the future. Some modules, like Selectors 4 or CSS Borders and Backgrounds Level 4 already have an Editor's Draft, though they haven't yet reached the First Published Working Draft status. 
+                 </p>
+                 <h2>Head Breaking</h2>
+                 <p> Justification is only really recommended if you have absolute control over your content, as it places irregular spaces between your words and can actually decrease readability unless you hyphenate correctly. (You can add soft hyphens using the HTML code &shy;.) Figure 7-5 shows the example text once more, but here I’ve set the text to justify and inserted soft hyphens into longer words so they break nicely and don’t cause too many irregular spaces between words.  </p>
+                 <p> These values provide, in my opinion, the most readable presentation of text, although using them does require more work from the content author; adding soft hyphens has to be done manually, which takes time, and when new content is added, you have to recheck the formatting to make sure that no errors were introduced.  </p>
+             </div>
+         </div>
+         <hr/>
+    </body>
+</html>

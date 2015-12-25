@@ -1,0 +1,1016 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Flex Box</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css" media="screen">
+
+        .flex {
+            display: -moz-flex;
+            display: flex;
+            width: auto;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            background-color: #eee;
+        }
+
+        .flex > div:nth-of-type(1) {
+            flex: 2;
+        }
+
+        .flex > div:nth-of-type(2) {
+            flex: 4;
+        }
+
+        .flex > div:nth-of-type(3) {
+            flex: 4;
+        }
+
+        .box {
+            /* width: 100px; */
+            height: 100px;
+        }
+
+        #f1 {
+            background-color: red;
+        }
+
+        #f2 {
+            background-color: orange;
+            box-flex: 3;
+        }
+
+        #f3 {
+            background-color: green;
+        }
+
+        /* order table example */
+
+        table {
+        }
+
+        thead {
+        }
+
+        tbody {
+            height: 400px; 
+            overflow-x: scroll;
+        }
+
+        th, td {
+            white-space: nowrap;
+            text-align: right;
+        }
+
+
+        #constrain-wrapper {
+            width: 1000px;
+            height: 300px;
+            overflow-x: auto;
+            overflow-y: auto;
+
+
+            /*
+               display: -moz-flex;
+               display: flex;
+               align-content: flex-start;
+               align-items: flex-start;
+               justify-content: flex-start;
+
+               display: -webkit-flex;
+               -webkit-flex-direction: column; 
+               display: flex;
+               flex-direction: row; 
+
+               align-content: justify;
+               overflow-x: scroll;
+             */
+        }
+
+        #fixed-head-wrapper {
+            table-layout: fixed;
+            background-color: #ccc;
+            opacity: 1;
+            z-index: 1001;
+        }
+
+        #grid-result thead {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="constrain-wrapper" style='position: relative; clear: both;'>
+        <div id="fixed-head-wrapper" style="overflow: hidden;">
+            <table style="">
+                <thead>
+                    <tr>
+                        <th>-</th>
+                        <th>Symbol</th>
+                        <th>Order No</th>
+                        <th>Side</th>
+                        <th>Volume</th>
+                        <th class="red">Price</th>
+                        <th>Published</th>
+                        <th>Account</th>
+                        <th>PC Flag</th>
+                        <th>Status</th>
+                        <th>Board</th>
+                        <th>Time</th>
+                        <th>Quote</th>
+                        <th>Quote Time</th>
+                        <th>Cluster Flag</th>
+                        <th>Cond.</th>
+                        <th>Orig Price</th>
+                        <th>Entry Order</th>
+                        <th>Name</th>
+                        <th>Unconfirmed</th>
+                        <th>TTF</th>
+                        <th>Date</th>
+                        <th>Solicit</th>
+                        <th>Confirm Flag</th>
+                        <th>Service Type</th>
+                        <th>Org Publish</th>
+                        <th>Use Foreign</th>
+                        <th>Force Sell</th>
+                        <th>Customer Name</th>
+                        <th>Type</th>
+                        <th>Basket Bastch No</th>
+                        <th>SType</th>
+                        <th>DMA</th>
+                        <th>Trading Channel</th>
+                        <th>Web Server IP</th>
+                        <th>ISP Assigned IP</th>
+                        <th>Client IP</th>
+                        <th>SETOrderID</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div id="result-wrapper" style="position: relative;">
+                <table id="grid-result">
+                    <thead>
+                        <tr>
+                            <th>-</th>
+                            <th>Symbol</th>
+                            <th>Order No</th>
+                            <th>Side</th>
+                            <th>Volume</th>
+                            <th class="red">Price</th>
+                            <th>Published</th>
+                            <th>Account</th>
+                            <th>PC Flag</th>
+                            <th>Status</th>
+                            <th>Board</th>
+                            <th>Time</th>
+                            <th>Quote</th>
+                            <th>Quote Time</th>
+                            <th>Cluster Flag</th>
+                            <th>Cond.</th>
+                            <th>Orig Price</th>
+                            <th>Entry Order</th>
+                            <th>Name</th>
+                            <th>Unconfirmed</th>
+                            <th>TTF</th>
+                            <th>Date</th>
+                            <th>Solicit</th>
+                            <th>Confirm Flag</th>
+                            <th>Service Type</th>
+                            <th>Org Publish</th>
+                            <th>Use Foreign</th>
+                            <th>Force Sell</th>
+                            <th>Customer Name</th>
+                            <th>Type</th>
+                            <th>Basket Bastch No</th>
+                            <th>SType</th>
+                            <th>DMA</th>
+                            <th>Trading Channel</th>
+                            <th>Web Server IP</th>
+                            <th>ISP Assigned IP</th>
+                            <th>Client IP</th>
+                            <th>SETOrderID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">OISHI</td>
+                            <td>00004500</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">10000.000000</td>
+                            <td class="align-r">72.500000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 09:32:14</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">RATCH</td>
+                            <td>00004441</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">15600.000000</td>
+                            <td class="align-r">78.750000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 09:30:20</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">C</td>
+                            <td class="align-c">PCSGH</td>
+                            <td>00003972</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">46000.000000</td>
+                            <td class="align-r">8.800000</td>
+                            <td class="align-c">C</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 08:31:39</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">O</td>
+                            <td class="align-c">CI</td>
+                            <td>00004345</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">0.000000</td>
+                            <td class="align-r">2.260000</td>
+                            <td class="align-c">O</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 09:20:13</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">CI</td>
+                            <td>00004328</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">70000.000000</td>
+                            <td class="align-r">2.220000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 09:18:37</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">O</td>
+                            <td class="align-c">CI</td>
+                            <td>00004317</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">0.000000</td>
+                            <td class="align-r">2.240000</td>
+                            <td class="align-c">O</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 09:16:43</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">RATCH</td>
+                            <td>00003609</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">50000.000000</td>
+                            <td class="align-r">60.250000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 07:45:50</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">BBL</td>
+                            <td>00003483</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">100000.000000</td>
+                            <td class="align-r">187.500000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 07:31:33</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">CI</td>
+                            <td>00003022</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">200000.000000</td>
+                            <td class="align-r">2.200000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 04:41:37</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">C</td>
+                            <td class="align-c">PCSGH</td>
+                            <td>00003000</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">20000.000000</td>
+                            <td class="align-r">8.800000</td>
+                            <td class="align-c">C</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 04:40:04</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">CI</td>
+                            <td>00003132</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">500000.000000</td>
+                            <td class="align-r">2.200000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 04:54:09</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">CI</td>
+                            <td>00002726</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">100000.000000</td>
+                            <td class="align-r">2.200000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 04:06:12</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">C</td>
+                            <td class="align-c">KSL</td>
+                            <td>00002881</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">0.000000</td>
+                            <td class="align-r">13.100000</td>
+                            <td class="align-c">C</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 04:25:33</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">C</td>
+                            <td class="align-c">KSL</td>
+                            <td>00002457</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">0.000000</td>
+                            <td class="align-r">13.100000</td>
+                            <td class="align-c">C</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 03:40:52</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">CI</td>
+                            <td>00002792</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">100000.000000</td>
+                            <td class="align-r">2.200000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 04:12:59</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">SCC</td>
+                            <td>00002769</td>
+                            <td class="align-c">B</td>
+                            <td class="align-r">16000.000000</td>
+                            <td class="align-r">492.000000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 04:10:35</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">OISHI</td>
+                            <td>00002707</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">5100.000000</td>
+                            <td class="align-r">73.000000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 04:04:34</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">C</td>
+                            <td class="align-c">TKS</td>
+                            <td>00002625</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">0.000000</td>
+                            <td class="align-r">9.650000</td>
+                            <td class="align-c">C</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 03:55:24</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">M</td>
+                            <td class="align-c">OISHI</td>
+                            <td>00002571</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">900.000000</td>
+                            <td class="align-r">73.000000</td>
+                            <td class="align-c">M</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 03:50:01</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr><tr>
+                            <td class="align-c">O</td>
+                            <td class="align-c">KSL</td>
+                            <td>00001561</td>
+                            <td class="align-c">S</td>
+                            <td class="align-r">25800.000000</td>
+                            <td class="align-r">13.100000</td>
+                            <td class="align-c">O</td>
+                            <td></td>
+                            <td class="align-c">00023</td>
+                            <td class="align-c">M</td>
+                            <td class="align-c">2015-02-10 02:57:59</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                            <td>??</td>
+                        </tr>
+                    </tbody>
+                </table> 
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" charset="utf-8">
+    $('#fixed-head-wrapper table').width($('#grid-result').width());
+    function sync_head() {
+        var wid = [];
+        $('#grid-result thead tr:first th').each(function(){
+            wid.push($(this).width());
+        });
+        $('#fixed-head-wrapper thead tr:first th').each(function(i){
+            $(this).width(wid[i]);
+        });
+    }
+    sync_head();
+    $("#fixed-head-wrapper").css('position', 'absolute');
+
+    function make_fixed_header() {
+        var thead = $('table thead:first');
+        var wid = [];
+        $('table tbody:first tr:first td').each(function(){
+            wid.push($(this).width());
+        });
+        var newtable = $("<table><thead>"+thead.html()+"</thead></table>");
+        newtable.find('th').each(function(i){
+            $(this).width(wid[i]);
+        });
+        $('#constrain-wrapper').append(newtable);
+        return true;
+    }
+
+    $('#constrain-wrapper').scroll(function(){
+        var top = ($(this).scrollTop());
+        $('#fixed-head-wrapper').css('top', top);
+    });
+</script>
+</html>
