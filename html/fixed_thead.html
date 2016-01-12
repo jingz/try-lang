@@ -1,58 +1,10 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Flex Box</title>
+    <title>Fixed-Header Table</title>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css" media="screen">
-
-        .flex {
-            display: -moz-flex;
-            display: flex;
-            width: auto;
-            align-content: center;
-            align-items: center;
-            justify-content: center;
-            background-color: #eee;
-        }
-
-        .flex > div:nth-of-type(1) {
-            flex: 2;
-        }
-
-        .flex > div:nth-of-type(2) {
-            flex: 4;
-        }
-
-        .flex > div:nth-of-type(3) {
-            flex: 4;
-        }
-
-        .box {
-            /* width: 100px; */
-            height: 100px;
-        }
-
-        #f1 {
-            background-color: red;
-        }
-
-        #f2 {
-            background-color: orange;
-            box-flex: 3;
-        }
-
-        #f3 {
-            background-color: green;
-        }
-
         /* order table example */
-
-        table {
-        }
-
-        thead {
-        }
-
         tbody {
             height: 400px; 
             overflow-x: scroll;
@@ -63,29 +15,11 @@
             text-align: right;
         }
 
-
         #constrain-wrapper {
             width: 1000px;
             height: 300px;
             overflow-x: auto;
             overflow-y: auto;
-
-
-            /*
-               display: -moz-flex;
-               display: flex;
-               align-content: flex-start;
-               align-items: flex-start;
-               justify-content: flex-start;
-
-               display: -webkit-flex;
-               -webkit-flex-direction: column; 
-               display: flex;
-               flex-direction: row; 
-
-               align-content: justify;
-               overflow-x: scroll;
-             */
         }
 
         #fixed-head-wrapper {
@@ -93,11 +27,17 @@
             background-color: #ccc;
             opacity: 1;
             z-index: 1001;
+            position: absolute;
         }
 
-        #grid-result thead {
-            visibility: hidden;
+        #fixed-head-wrapper th {
+            text-align: center;
         }
+
+        #grid-result td {
+            border: 1px solid black;
+        }
+
     </style>
 </head>
 <body>
@@ -150,6 +90,9 @@
         </div>
         <div id="result-wrapper" style="position: relative;">
                 <table id="grid-result">
+                    <colgroup>
+                        <col style='background-color: red; width: 20px;'></col>
+                    </colgroup>
                     <thead>
                         <tr>
                             <th>-</th>
@@ -205,33 +148,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 09:32:14</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">M</td>
                             <td class="align-c">RATCH</td>
@@ -244,33 +161,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 09:30:20</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">C</td>
                             <td class="align-c">PCSGH</td>
@@ -283,33 +174,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 08:31:39</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">O</td>
                             <td class="align-c">CI</td>
@@ -322,33 +187,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 09:20:13</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">M</td>
                             <td class="align-c">CI</td>
@@ -361,33 +200,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 09:18:37</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">O</td>
                             <td class="align-c">CI</td>
@@ -400,33 +213,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 09:16:43</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">M</td>
                             <td class="align-c">RATCH</td>
@@ -439,33 +226,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 07:45:50</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">M</td>
                             <td class="align-c">BBL</td>
@@ -478,33 +239,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 07:31:33</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">M</td>
                             <td class="align-c">CI</td>
@@ -517,33 +252,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 04:41:37</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">C</td>
                             <td class="align-c">PCSGH</td>
@@ -556,33 +265,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 04:40:04</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">M</td>
                             <td class="align-c">CI</td>
@@ -595,33 +278,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 04:54:09</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">M</td>
                             <td class="align-c">CI</td>
@@ -634,33 +291,7 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 04:06:12</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">C</td>
                             <td class="align-c">KSL</td>
@@ -790,33 +421,10 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 04:10:35</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">M</td>
                             <td class="align-c">OISHI</td>
@@ -829,33 +437,10 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 04:04:34</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">C</td>
                             <td class="align-c">TKS</td>
@@ -868,33 +453,9 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 03:55:24</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">M</td>
                             <td class="align-c">OISHI</td>
@@ -907,33 +468,9 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 03:50:01</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr><tr>
                             <td class="align-c">O</td>
                             <td class="align-c">KSL</td>
@@ -946,71 +483,75 @@
                             <td class="align-c">00023</td>
                             <td class="align-c">M</td>
                             <td class="align-c">2015-02-10 02:57:59</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
-                            <td>??</td>
+                            <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td> <td>??</td>
                         </tr>
                     </tbody>
                 </table> 
         </div>
     </div>
+
+    <div>
+        <pre>
+        STEPS
+        1. adding a table which just store header and wrap it with absolute positons above the target table.
+        2. after render the main table then set width of main table equal to the header table.
+        3. copy header columns width from main table then apply to the header table.
+        4. add scroll event at the container with set top of header table equal to scrollTop of container
+        </pre>
+
+        <pre style='background-color: #ccc;'>
+        <code>
+setTimeout(function(){
+    // sync with of the 2 tables
+    $('#fixed-head-wrapper table').width($('#grid-result').width());
+
+    // sync each column width of header of 2 tables
+    sync_head();
+}, 100);
+
+function sync_head() {
+    var wid = [];
+    $('#grid-result thead tr:first th').each(function(){
+        wid.push($(this).width());
+    });
+
+    $('#fixed-head-wrapper thead tr:first th').each(function(i){
+        $(this).width(wid[i]);
+    });
+}
+
+$('#constrain-wrapper').scroll(function(){
+    var top = ($(this).scrollTop());
+    $('#fixed-head-wrapper').css('top', top);
+});
+        </code>
+        </pre>
+    </div>
 </body>
 
 <script type="text/javascript" charset="utf-8">
+setTimeout(function(){
+    // sync with of the 2 tables
     $('#fixed-head-wrapper table').width($('#grid-result').width());
-    function sync_head() {
-        var wid = [];
-        $('#grid-result thead tr:first th').each(function(){
-            wid.push($(this).width());
-        });
-        $('#fixed-head-wrapper thead tr:first th').each(function(i){
-            $(this).width(wid[i]);
-        });
-    }
+
+    // sync each column width of header of 2 tables
     sync_head();
-    $("#fixed-head-wrapper").css('position', 'absolute');
+}, 100);
 
-    function make_fixed_header() {
-        var thead = $('table thead:first');
-        var wid = [];
-        $('table tbody:first tr:first td').each(function(){
-            wid.push($(this).width());
-        });
-        var newtable = $("<table><thead>"+thead.html()+"</thead></table>");
-        newtable.find('th').each(function(i){
-            $(this).width(wid[i]);
-        });
-        $('#constrain-wrapper').append(newtable);
-        return true;
-    }
-
-    $('#constrain-wrapper').scroll(function(){
-        var top = ($(this).scrollTop());
-        $('#fixed-head-wrapper').css('top', top);
+function sync_head() {
+    var wid = [];
+    $('#grid-result thead tr:first th').each(function(){
+        wid.push($(this).width());
     });
+
+    $('#fixed-head-wrapper thead tr:first th').each(function(i){
+        $(this).width(wid[i]);
+    });
+}
+
+$('#constrain-wrapper').scroll(function(){
+    var top = ($(this).scrollTop());
+    $('#fixed-head-wrapper').css('top', top);
+});
 </script>
 </html>
