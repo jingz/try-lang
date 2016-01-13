@@ -16,6 +16,8 @@
         }
 
         #constrain-wrapper {
+            position: relative;
+            clear: both;
             width: 1000px;
             height: 300px;
             overflow-x: auto;
@@ -28,6 +30,7 @@
             opacity: 1;
             z-index: 1001;
             position: absolute;
+            overflow: hidden;
         }
 
         #fixed-head-wrapper th {
@@ -41,7 +44,7 @@
     </style>
 </head>
 <body>
-    <div id="constrain-wrapper" style='position: relative; clear: both;'>
+    <div id="constrain-wrapper">
         <div id="fixed-head-wrapper" style="overflow: hidden;">
             <table style="">
                 <thead>
