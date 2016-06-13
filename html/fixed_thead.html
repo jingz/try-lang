@@ -4,12 +4,6 @@
     <title>Fixed-Header Table</title>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css" media="screen">
-        /* order table example */
-        tbody {
-            height: 400px; 
-            overflow-x: scroll;
-        }
-
         th, td {
             white-space: nowrap;
             text-align: right;
@@ -45,11 +39,11 @@
 </head>
 <body>
     <div id="constrain-wrapper">
-        <div id="fixed-head-wrapper" style="overflow: hidden;">
-            <table style="">
+        <div id="fixed-head-wrapper">
+            <table>
                 <thead>
                     <tr>
-                        <th>-</th>
+                        <th>x</th>
                         <th>Symbol</th>
                         <th>Order No</th>
                         <th>Side</th>
@@ -91,14 +85,11 @@
                 </thead>
             </table>
         </div>
-        <div id="result-wrapper" style="position: relative;">
+        <div id="result-wrapper">
                 <table id="grid-result">
-                    <colgroup>
-                        <col style='background-color: red; width: 20px;'></col>
-                    </colgroup>
                     <thead>
                         <tr>
-                            <th>-</th>
+                            <th>x</th>
                             <th>Symbol</th>
                             <th>Order No</th>
                             <th>Side</th>
@@ -497,9 +488,10 @@
         <pre>
         STEPS
         1. adding a table which just store header and wrap it with absolute positons above the target table.
-        2. after render the main table then set width of main table equal to the header table.
-        3. copy header columns width from main table then apply to the header table.
-        4. add scroll event at the container with set top of header table equal to scrollTop of container
+        2. after render the main table (must use setTimout with a little delay to make sure the renderring done) 
+        3. then set width of main table equal to the header table.
+        4. copy header columns width from main table then apply to the header table.
+        5. add scroll event at the container with set top of header table equal to scrollTop of container
         </pre>
 
         <pre style='background-color: #ccc;'>

@@ -10,4 +10,3 @@ print "sdfdsf"
 class Person:
     def test(self):
         return "person test"
-

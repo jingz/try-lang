@@ -83,4 +83,3 @@ for k, v in o.adict.iteritems():
    print k, "has value is", v
 print "delete first element in dict %s" % (o.adict.pop('first'))
 print "the rest %s" % o.adict
-
