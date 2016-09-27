@@ -1,21 +1,20 @@
 Flask Cheatsheet
 ----------------
   high-level api able to import directly from flask `from flask import ...`
-
   flask dependents on: werkzeug(routing, request, response),
                        jinja2(templating), 
                        blinker(signaling)
 
 ------------------------------------------------------------------------
-abort(status) -> werkzeug.exceptions
-    Raise an exception by the error code or WSGI application.
-    [more][http://werkzeug.pocoo.org/docs/0.11/exceptions/#simple-aborting]
+### abort(status) -> werkzeug.exceptions
+  Raise an exception by the error code or WSGI application.
+  ![more](http://werkzeug.pocoo.org/docs/0.11/exceptions/#simple-aborting)
 
-redirect(location, code=302, Response=None) -> werkzeug.utils
-    Return a response object 
-    [more][http://werkzeug.pocoo.org/docs/0.11/utils/]
+### redirect(location, code=302, Response=None) -> werkzeug.utils
+  Return a response object 
+  ![more](http://werkzeug.pocoo.org/docs/0.11/utils/)
 
-Markup([String]) -> jinja2
+  Markup([String]) -> jinja2
     Marks a string as being safe for inclusion in HTML/XML output without needing to be escaped 
     ### example
     ```python
@@ -30,7 +29,7 @@ Markup([String]) -> jinja2
     ```
     [more][http://jinja.pocoo.org/docs/dev/api/#jinja2.Markup]
 
-escape(string) -> jinja2
+  escape(string) -> jinja2
     Convert the characters &, <, >, ', and " in string to HTML-safe sequences 
     [more][http://jinja.pocoo.org/docs/dev/templates/#escape]
 
