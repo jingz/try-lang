@@ -135,13 +135,13 @@ to display it to the user, the template has to call `get_flashed_messages`
 >    permanent = True the session lives for permanent_session_lifetime
 
 *_request_ctx_stack -> .globals*
->    attributes in stack:
-    app = the active Flask application.
-    url_adapter = the UTL adapter that was used to match the request.
-    request = the current request object.
-    session = the active session object.
-    g = an object with all the attributes of the flask.g object.
-    flashes = an internal cache for the flashed messages.
+>    attributes in stack:  
+>    app = the active Flask application.  
+>    url_adapter = the UTL adapter that was used to match the request.  
+>    request = the current request object.  
+>    session = the active session object.  
+>    g = an object with all the attributes of the flask.g object.  
+>    flashes = an internal cache for the flashed messages.
 
 *_app_ctx_stack -> .globals*
 >    active application context
