@@ -128,10 +128,10 @@ to display it to the user, the template has to call `get_flashed_messages`
 >    Incoming request data
 
 *session -> .globals*
->    Ordinary dict that keeps track on modifications
->    attributes
->    new = True if the session is new, otherwise False
->    modified = True if sessoin object detected a moddification
+>    Ordinary dict that keeps track on modifications  
+>    attributes  
+>    new = True if the session is new, otherwise False  
+>    modified = True if sessoin object detected a moddification  
 >    permanent = True the session lives for permanent_session_lifetime
 
 *_request_ctx_stack -> .globals*
