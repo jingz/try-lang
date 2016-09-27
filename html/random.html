@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Random</title>
+    <style type="text/css" media="screen">
+    spx {
+        display: table;
+        color: red;
+        font-size: 18px;
+    }
+
+    spx::before {
+        content: "BEFORE CONTENT OF SPX";
+    }
+
+    spx::after {
+        content: "AFTER CONTENT OF SPX";
+    }
+    </style>
+</head>
+<body onload="ready()">
+    <menu></menu>
+    <samp>
+        SAMP
+        asdfasdf
+        asdfasdf
+        asdfasdfloiwuer
+        xx,mnvmsdfjweroiu
+        as.,dfmpwier
+    </samp>
+    <spx>
+        test
+    </spx>
+    <grid onloaded="alert('test')">
+        <header>Test</header>
+        <header>Test</header>
+        <header>Test</header>
+        <header>Test</header>
+        <header>Test</header>
+    </grid>
+
+    <div id="bb" class='bbs' 
+                name='bb' 
+                accessKey='K'
+                data-mmm='hi mmm!' 
+                onfocus="alert(K)"
+                data-json='{ test: "vsiuoiwuer" }'> test </div>
+
+    <div id="xtest">
+        TEST TEST 
+    </div>
+    <model id='User' data-firstname='{ type: String }' 
+                     data-lastname='{ type: String }' />
+
+    <form action="random_submit" method="get" accept-charset="utf-8">
+        <meter value='20' min='0' max='100'></meter>
+    </form>
+
+    <p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
+    <del ><p >This paragraph has been deleted.</p ></del >
+    <s>Strike Text</s>
+</body>
+<script type="text/javascript" charset="utf-8">
+    function ready(){
+        // alert(bb.innerHTML);
+        var els = document.getElementsByClassName('bbs');
+        console.log(els);
+        console.log(bb)
+    }
+</script>
+</html>
