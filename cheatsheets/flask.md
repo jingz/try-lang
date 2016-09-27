@@ -1,9 +1,10 @@
 Flask Cheatsheet
 ----------------
-high-level api able to import directly from flask `from flask import ...`
-flask dependents on: werkzeug(routing, request, response), 
-                     jinja2(templating), 
-                     blinker(signaling)
+  high-level api able to import directly from flask `from flask import ...`
+
+  flask dependents on: werkzeug(routing, request, response),
+                       jinja2(templating), 
+                       blinker(signaling)
 
 ------------------------------------------------------------------------
 abort(status) -> werkzeug.exceptions
