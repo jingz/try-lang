@@ -1,8 +1,7 @@
 # How CSS Work (Simplified Version)
-----
 
 ### HTML Rendering Process
-1. HTML docuemnt sent from server loaded.
+1. HTML document sent from server loaded.
 2. Browser Parsing HTML into document tree -> DOM
 3. While HTML being parsed, stylesheets are interpreted and resolved called *Cascade*
     -   combining different stylesheets
@@ -20,11 +19,8 @@
 5. Process the calculation of the Box Model called *Visual Formattig Model*
     -  positioning schemes ( absolute, float )
     -  formatting contexts ( flex, table, grid )
+        - Flex containter has block outer type and flex for inner type.
     -  display modes (block, inline)
+        - Display is shared btw an element and it's parent element.
+        - `will-change` use for speed boost browser rendering before the element change
     -  stacking contexts (z-index, will-change)
-
-    * Flex containter has block outer type and flex for inner type.
-    * Display is shared btw an element and it's parent element.
-    * `will-change` use for speed boost browser rendering before the element change
-
-
