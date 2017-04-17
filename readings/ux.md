@@ -24,18 +24,18 @@
     - GOMS = Goals / Operations / Methods / Selection Rules
     - Keystroke-Level = the time for keystroking, poiting, homing, drawing, thinking, waiting for system respond
     - GOMS example
-        - G is like Edit document, sub goal is insert word.
+        - G is like Edit document, sub-goal is inserting a word.
         - Os are execution which is necessary to change aspect users' mental state of effect task env
-            - press up-arrow key, move hand to mouse
+            - press up-arrow key, move a hand to the mouse
             - recall file name, verify cursor ...
         - M = procedure for accomplishing a goal. ? set of operations
         - S = control structures for choosing methods
             - delete by repeated backspace
             - delete by select text and press Del
-    - GOMS dose not explain in any detail how the notation works.
+    - GOMS does not explain in any detail how the notation works.
 
 3. (1985) Kieras introduce NGOMSL
-    - N for Natureal and L for Language
+    - N for Natural and L for Language
     - NGOMSL example
         ```
         method 1 delete text
@@ -54,7 +54,7 @@
         - 1. Forming the goal
         - 2. Forming the intention
         - 3. Specify the action
-    - pshyical action [execution]
+    - physical action [execution]
         - 4. Executing the action
     - metal actions [evaluation]
         - 5. Perceiving the system state
@@ -64,24 +64,24 @@
     - [1-4]{ Execution } <--> {Evaluatoin}[5-7]
     - this model lead to 4 principle design
         1. The state and the action alternatives should be visible.
-        2. There shoud be good conceptual model with a consistent system image.
-        3. UI should includes good mappings that reveal the relationship btw stages.
-        4. User should receive continous feedback.
+        2. There should be a good conceptual model with a consistent system image.
+        3. UI should include good mappings that reveal the relationship btw stages.
+        4. The user should receive continuous feedback.
 
 5. (1980) SSOA by Shneiderman 
-    - SSOA = Systactic-Semantic object-action
+    - SSOA = Syntactic-Semantic object-action
     - a representation of the user's knowledge in long-term mem.
-    - syntacitc knowledge is varied, device dependent, easily forgotten, rote memorization
-    - example which action erase a char ( delete, backspace, CTRL-H )
-    - semantic knowledge is store in long-term mem 
+    - syntactic knowledge is varied, device dependent, easily forgotten, rote memorization
+    - an example which action erase a char ( delete, backspace, CTRL-H )
+    - semantic knowledge storing in long-term mem 
         - task concept
         - computer concept
-    - example of all knowledge in writing business letter using computer sw.
+    - an example of all knowledge in writing a business letter using computer software.
         - the user must have the high-level concept of writing (task action)
         - the letter (task object)
         - knowing the detail of save command (computer action and syntactic) 
         - file ( computer object )
-        - user must know how to compose the sentence and recogize the mechanism for begining writing and ending a sentence (middle-level).
-        - user must know the spelling each word (low-level task)
+        - the user must know how to compose the sentence and recognize the mechanism for beginning writing and ending a sentence (middle-level).
+        - the user must know the spelling each word (low-level task)
         - knowing which key to press (syntactic)
         - comprehend the motion of the cursor (computer concept)
