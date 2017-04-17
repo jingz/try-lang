@@ -178,17 +178,16 @@
 #### Usability
 
 [10 Usability Heuristics for User Interface Design](http://designingwebinterfaces.com/6-tips-for-a-great-flex-ux-part-5)
-
-    1. Visibiliy of system status
-    2. Match between system and the real world
-    3. User control and freedom
-    4. Consistency and standards
-    5. Error prevention
-    6. Recognitoin rather than recall
-    7. Flexibiliy and efficiency of use
-    8. Aesthetic and minimalist design
-    9. Help users recognize, diagnose, and recover from errors
-    10. Help and document
+1. __Visibiliy of system status__
+2. Match between system and the real world
+3. __User control and freedom__
+4. Consistency and standards
+5. __Error prevention__
+6. Recognitoin rather than recall
+7. Flexibiliy and efficiency of use
+8. Aesthetic and minimalist design
+9. Help users recognize, diagnose, and recover from errors
+10. Help and document
         
         
 
