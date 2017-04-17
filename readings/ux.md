@@ -176,7 +176,9 @@
     5. Subjective satisfaction
     
 #### Usability
-10 Usability Heuristics for User Interface Design
+
+[10 Usability Heuristics for User Interface Design](http://designingwebinterfaces.com/6-tips-for-a-great-flex-ux-part-5)
+
     1. Visibiliy of system status
     2. Match between system and the real world
     3. User control and freedom
@@ -187,7 +189,8 @@
     8. Aesthetic and minimalist design
     9. Help users recognize, diagnose, and recover from errors
     10. Help and document
-    [link](http://designingwebinterfaces.com/6-tips-for-a-great-flex-ux-part-5)
+        
+        
 
 #### UI Priciples
 
