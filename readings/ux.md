@@ -127,7 +127,7 @@
             - make assistance convenient
             - permit use of form-manage tools
         - *bad*
-            - comsume screen space
+            - consume screen space
     - Command language
         - *good*
             - flexible
@@ -160,7 +160,7 @@
     
     1. Strive for consistency
     2. Enable frequent user to use shortcuts.
-    3. Offer infomative feedback.
+    3. Offer informative feedback.
     4. Yield closure
     5. Offer simple error handling.
     6. Permit easy reversal of actions.
@@ -169,8 +169,8 @@
 
 3. User friendliness :) are
 
-    1. Time to lean
-    2. Spped of performace
+    1. Time to learn
+    2. Speed of performance
     3. Rate of error by users
     4. Retention overtime
     5. Subjective satisfaction
@@ -183,8 +183,8 @@
 3. __User control and freedom__
 4. Consistency and standards
 5. __Error prevention__
-6. Recognitoin rather than recall
-7. Flexibiliy and efficiency of use
+6. Recognition rather than recall
+7. Flexibility and efficiency of use
 8. Aesthetic and minimalist design
 9. Help users recognize, diagnose, and recover from errors
 10. Help and document
@@ -193,7 +193,7 @@
 
 #### UI Priciples
 
-1. Typography : 5 Simple Rules
+1. Typography: 5 Simple Rules
     - Start body test look good determined by these 4 typographic.
     - POINT SIZE is the size of the letters.
         - In print, 10-12pt
@@ -203,13 +203,13 @@
         - `line-height` in CSS
     - LINE LEIGHT is the horizontal width of the text block
         - It should average of 45-90 characters per line
-        - PAGE MARGIN usually learger than 1 inch
+        - PAGE MARGIN usually larger than 1 inch
     - FONT CHOICE
-        - use professional font
+        - use the professional font
 2. Color
     - Choose color pallete
 3. Location / Position
     - eye travel time
     - mouse travel time
 4. Form
-    - bold label above the fields
+    - the bold label above the fields
