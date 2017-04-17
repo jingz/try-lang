@@ -85,3 +85,129 @@
         - the user must know the spelling each word (low-level task)
         - knowing which key to press (syntactic)
         - comprehend the motion of the cursor (computer concept)
+
+6. My Theory
+    - It's true content
+    - benefit to user / listener / audient
+    - on the right time and place
+    - come from good intention.
+    - polite introducing
+
+### Principles
+
+#### Recognize the Diversity
+
+1. User Profile
+    - Novice or first time users who have no syntactic knowledge and less symatic knowledge
+    - Knowledgeable users
+    - Expert frequent users -> power user
+
+2. Task profile
+    - Frequent actions might performed by special keys
+    - Intermediately frequent actions -> CTRL+?
+    - Less frequent actions -> goto command mode
+    - Infrequent actions or complex actions -> GUI, Menu, Form Fill
+
+3. Interactoin styles
+    - Menu selection
+        - *good*
+            - shorten learning
+            - reduces key-strokes
+            - structure decision making
+            - permit user of dialog-manament
+            - allow easy support of error handling
+        - *bad*
+            - imposes danger of many menus
+            - may slow frequent users.
+            - consumes screen space
+    - Form Filin
+        - *good*
+            - simplified data entry
+            - requires medest training
+            - make assistance convenient
+            - permit use of form-manage tools
+        - *bad*
+            - comsume screen space
+    - Command language
+        - *good*
+            - flexible
+            - appeals to "power user"
+            - support user initiative
+            - convenient for creating user-defined macro.
+       - *bad*
+            - required memo
+    - Natural language
+        - *good*
+            - releieves burden of learning syntax
+        - *bad*
+            - requires clarificatoin dialog
+            - more key strokes
+            - not show context
+            - unpredictable
+    - Direct Manipulation
+        - *good*
+            - presents task concepts visually
+            - easy to learn
+            - easy to retain
+            - allow errors to be avoided
+            - encourages exploration
+            - permit hight subjective stisfaction
+        - *bad*
+            - hard to program
+            - GUI required
+
+2. Dialog Design: 8 Golden Rules
+    
+    1. Strive for consistency
+    2. Enable frequent user to use shortcuts.
+    3. Offer infomative feedback.
+    4. Yield closure
+    5. Offer simple error handling.
+    6. Permit easy reversal of actions.
+    7. Support internal locus of control
+    8. Reduce short-term memory load (7+-2)
+
+3. User friendliness :) are
+
+    1. Time to lean
+    2. Spped of performace
+    3. Rate of error by users
+    4. Retention overtime
+    5. Subjective satisfaction
+    
+#### Usability
+10 Usability Heuristics for User Interface Design
+    1. Visibiliy of system status
+    2. Match between system and the real world
+    3. User control and freedom
+    4. Consistency and standards
+    5. Error prevention
+    6. Recognitoin rather than recall
+    7. Flexibiliy and efficiency of use
+    8. Aesthetic and minimalist design
+    9. Help users recognize, diagnose, and recover from errors
+    10. Help and document
+    [link](http://designingwebinterfaces.com/6-tips-for-a-great-flex-ux-part-5)
+
+#### UI Priciples
+
+1. Typography : 5 Simple Rules
+    - Start body test look good determined by these 4 typographic.
+    - POINT SIZE is the size of the letters.
+        - In print, 10-12pt
+        - On the web, 15 - 25 px
+    - LINE SPACING is the verical distance btw lines
+        - It should be 120 - 145%
+        - `line-height` in CSS
+    - LINE LEIGHT is the horizontal width of the text block
+        - It should average of 45-90 characters per line
+        - PAGE MARGIN usually learger than 1 inch
+    - FONT CHOICE
+        - use professional font
+2. Color
+    - Choose color pallete
+3. Location / Position
+    - eye travel time
+    - mouse travel time
+4. Form
+    - bold label above the fields
