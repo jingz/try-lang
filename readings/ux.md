@@ -193,7 +193,7 @@
 
 #### UI Priciples
 
-1. Typography: 5 Simple Rules
+1. [Typography: 5 Simple Rules](http://practicaltypography.com/typography-in-ten-minutes.html)
     - Start body test look good determined by these 4 typographic.
     - POINT SIZE is the size of the letters.
         - In print, 10-12pt
