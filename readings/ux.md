@@ -207,8 +207,8 @@
     - FONT CHOICE
         - use the professional font
 2. Color
-    - Choose color pallete
-3. Location / Position
+    - [Choose color from colorscheme](http://colorschemedesigner.com/csd-3.5/)
+3. Position of Element
     - eye travel time
     - mouse travel time
 4. Form
