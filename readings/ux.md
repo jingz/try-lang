@@ -86,6 +86,15 @@
         - knowing which key to press (syntactic)
         - comprehend the motion of the cursor (computer concept)
     
+
+#### My UX Theory
+
+- It's true content
+- benefit to user / listener / audient
+- on the right time and place
+- come from good intention.
+- polite introducing
+
 ---------
 
 #### Recognize the Diversity
@@ -169,14 +178,6 @@
     5. Subjective satisfaction
     
 --------------
-
-#### My UX Theory
-
-- It's true content
-- benefit to user / listener / audient
-- on the right time and place
-- come from good intention.
-- polite introducing
 
 ### Principles
 
