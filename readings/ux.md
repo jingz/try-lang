@@ -85,15 +85,8 @@
         - the user must know the spelling each word (low-level task)
         - knowing which key to press (syntactic)
         - comprehend the motion of the cursor (computer concept)
-
-6. My Theory
-    - It's true content
-    - benefit to user / listener / audient
-    - on the right time and place
-    - come from good intention.
-    - polite introducing
-
-### Principles
+    
+---------
 
 #### Recognize the Diversity
 
@@ -175,6 +168,18 @@
     4. Retention overtime
     5. Subjective satisfaction
     
+--------------
+
+#### My UX Theory
+
+- It's true content
+- benefit to user / listener / audient
+- on the right time and place
+- come from good intention.
+- polite introducing
+
+### Principles
+
 #### Usability
 
 [10 Usability Heuristics for User Interface Design](http://designingwebinterfaces.com/6-tips-for-a-great-flex-ux-part-5)
@@ -188,9 +193,7 @@
 8. Aesthetic and minimalist design
 9. Help users recognize, diagnose, and recover from errors
 10. Help and document
-        
-        
-
+               
 #### UI Priciples
 
 1. [Typography: 5 Simple Rules](http://practicaltypography.com/typography-in-ten-minutes.html)
