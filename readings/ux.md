@@ -7,31 +7,40 @@
         - user mental model
         - set of familiar task-oriented objects and actions the user needs to know about to use the system.
         - ex. character, files, paragraph -> deleting, insert 
+        - ex. search form, booking form, flight result, flight ticket -> booking, searching
     2. Semantic level
         - desc the meaning conveyed by user command input and output display
         - specification of the actions from user mental model
         - ex. move the paragraph
+        - ex. searching flight
     3. Syntactic level
         - how to perform a certain task.
         - how semantic command is formed.
-        - ex. prefix vs postfix ( Edit )
+        - ex. prefix vs postfix ( Edit, Highlight, Cut, Paste)
+        - ex. filing search form and search
     4. Lexical level
         - device dependencies
         - sequences of the actions
         - ex. Point to edit on menu bar->click ->select option within edit menu.
+        - ex. Goto the home page -> click the flight type on radio -> enter deperture city code in departure textbox
+        - ex.(cont) -> enter arrival city code on arrival textbox -> click the search button
 
 2. (1983) GOMS and the keystroke-level model by Card, Moran, Newell
     - GOMS = Goals / Operations / Methods / Selection Rules
     - Keystroke-Level = the time for keystroking, poiting, homing, drawing, thinking, waiting for system respond
     - GOMS example
         - G is like Edit document, sub-goal is inserting a word.
+        - G is booking a flight -> sub-goal is searching flight.
         - Os are execution which is necessary to change aspect users' mental state of effect task env
             - press up-arrow key, move a hand to the mouse
             - recall file name, verify cursor ...
+            - more ex. goto homepage -> checking flight type -> enter the city code -> ...
         - M = procedure for accomplishing a goal. ? set of operations
         - S = control structures for choosing methods
             - delete by repeated backspace
             - delete by select text and press Del
+            - more ex. searching by enter the city code first
+            - searching by enter the valid url
     - GOMS does not explain in any detail how the notation works.
 
 3. (1985) Kieras introduce NGOMSL
