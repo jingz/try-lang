@@ -215,6 +215,6 @@
 3. Position of Element
     - eye travel time
     - mouse travel time
-    - (the Page Fold)[https://www.nngroup.com/articles/page-fold-manifesto/]
+    - [the Page Fold](https://www.nngroup.com/articles/page-fold-manifesto/)
 4. Form
     - the bold label above the fields
