@@ -94,16 +94,7 @@
         - the user must know the spelling each word (low-level task)
         - knowing which key to press (syntactic)
         - comprehend the motion of the cursor (computer concept)
-    
-
-#### My UX Theory
-
-- It's true content
-- benefit to user / listener / audient
-- on the right time and place
-- come from good intention.
-- polite introducing
-
+   
 ---------
 
 #### Recognize the Diversity
