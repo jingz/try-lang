@@ -6,9 +6,9 @@ end
 
 
 class A
-  puts "in class A"
-  puts self
-  puts self.class
+  puts "in class A"  #=> in class A
+  puts self  #=> A
+  puts self.class  #=> Class
 end
 
 animal = "Dog"
@@ -18,7 +18,7 @@ class << animal
   end
 end
 
-puts animal.speak
+puts animal.speak  #=> Hong!
 
 class Person
   @heart = true
@@ -27,9 +27,9 @@ class Person
   end
 end
 
-puts Person.heart
+puts Person.heart  #=> true
 Person.heart = false
-puts Person.heart
+puts Person.heart  #=> false
 
 s = class << Template
   def self.xxx
@@ -38,12 +38,12 @@ s = class << Template
 
   self
 end
-puts s
+puts s  #=> #<Class:Template>
 
 T = class << Person; self end
-puts T
+puts T  #=> #<Class:Person>
 
 n = Class.new do
   self
 end < Person
-puts n.class
+puts n.class  #=> NilClass
