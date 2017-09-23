@@ -4,11 +4,17 @@ Random Try Interesting stuff
 ### Stuff trying
 
 Lisp
+- tour Lisp features
 - interesting marco syntax
 - easy for building DSL
 
 Bash
+- fetching images/data from internet using bash script with `curl` command
+- searching text in current directory recursively, contain(text)
+- display mem usage by `top` command
+- simple loop and switch case echo thing
 - easy to get thing done ( less dependencies required )
+
 
 SSE
 - try Server Sent Event in javascript, `text/event-stream`
@@ -17,6 +23,7 @@ SSE
      id: id\n
      data: datastring\n\n
     `
+
 Coffeescript
 - try coffee using ruby to compile
 
@@ -35,3 +42,6 @@ HTML/CSS
 - making table with fixed header while scrolling x and y axis (the table with overflowing xy)
 - sass basic
 - vanilla HTML5 drag and drop
+
+NodeJS
+- readline script Q&A
