@@ -45,3 +45,37 @@ HTML/CSS
 
 NodeJS
 - readline script Q&A
+
+Ruby
+- capture binding when debug `ruby-debug-base`
+- trying class variables and module variables
+- google codejam using ruby
+- raise exeption with hash as a message
+- try `forwardable` in ruby
+- simple hello in Cystal
+- try `include` and `extend`
+- try class features, `singleton`, `print in class body`, `class << AnotherObject`
+- try `Struct` in module
+- simple setup and run `sinatra` server
+- `thread` in ruby
+- `proc` and `lambda` calling
+- printing in parent and child `process`
+- setting `Rack` stream server
+- appending text into a fine at a given line
+- basic connect using `zmq`
+
+Python
+- printing `argv` in script
+- basic python features
+- try simple class struct in python, 
+    - prepending a variable with `__` is private but not `_`
+    - decoration fuction
+    - lambda
+    - `@property` decoration
+- dynamically creating a class
+- try `__metaclass__`
+- finding diff time, `datetime`, `timedelta`
+
+- Reading / Lecture
+    - [UX research](./readings/ux.md)
+    - [How CSS work](./readings/how-css-work.md)
