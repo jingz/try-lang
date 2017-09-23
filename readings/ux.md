@@ -218,3 +218,13 @@
     - [the Page Fold](https://www.nngroup.com/articles/page-fold-manifesto/)
 4. Form
     - the bold label above the fields
+
+
+### My UX Theory - since UX is a kind of communication
+
+- It's true content
+- Benefit to user / listener / audient
+- On the right time and place
+- Come from good intention
+- Polite introducing
+

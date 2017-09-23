@@ -1,14 +1,15 @@
 Random Try Interesting stuff
 ====================
 
-### Stuff trying
+## Stuff trying
 
-Lisp
+### Lisp
 - tour Lisp features
 - interesting marco syntax
 - easy for building DSL
 
-Bash
+
+### Bash
 - fetching images/data from internet using bash script with `curl` command
 - searching text in current directory recursively, contain(text)
 - display mem usage by `top` command
@@ -16,24 +17,20 @@ Bash
 - easy to get thing done ( less dependencies required )
 
 
-SSE
-- try Server Sent Event in javascript, `text/event-stream`
+### Javascript
+- JS date is sometime confused when get into formatting
+- Dont forget `var` in recursive for loop
+- Getting type of premitive js object
+- Testing with phanthom JS, requesting the web and simulating a click on a screen
+- try Server Sent Event (SSE) in javascript, `text/event-stream`
 - must have body 
     `event: event_name\n
      id: id\n
      data: datastring\n\n
     `
 
-Coffeescript
-- try coffee using ruby to compile
 
-Javascript
-- JS date is sometime confused when get into formatting
-- Dont forget `var` in recursive for loop
-- Getting type of premitive js object
-- Testing with phanthom JS, requesting the web and simulating a click on a screen
-
-HTML/CSS
+### HTML/CSS
 - owning css class, using arbitrary class and attribute name in css
 - using custome webfont with `@font-face`
 - try css3 selectors `:first-child`,`last-child`,`nth-child`
@@ -43,10 +40,13 @@ HTML/CSS
 - sass basic
 - vanilla HTML5 drag and drop
 
-NodeJS
-- readline script Q&A
 
-Ruby
+### NodeJS
+- readline script Q&A
+- basic setup express web framework
+
+
+### Ruby
 - capture binding when debug `ruby-debug-base`
 - trying class variables and module variables
 - google codejam using ruby
@@ -64,7 +64,8 @@ Ruby
 - appending text into a fine at a given line
 - basic connect using `zmq`
 
-Python
+
+### Python
 - printing `argv` in script
 - basic python features
 - try simple class struct in python, 
@@ -76,6 +77,7 @@ Python
 - try `__metaclass__`
 - finding diff time, `datetime`, `timedelta`
 
-- Reading / Lecture
-    - [UX research](./readings/ux.md)
-    - [How CSS work](./readings/how-css-work.md)
+
+### Reading / Lecture
+- [UX research](./readings/ux.md)
+- [How CSS work](./readings/how-css-work.md)
