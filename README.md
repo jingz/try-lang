@@ -1,6 +1,12 @@
 Random Try Interesting stuff
 ====================
 
+### Reading / Lecture
+- [UX research](./readings/ux.md)
+- [How CSS work](./readings/how-css-work.md)
+- [Memory and Learning Facts](./readings/memory_and_leaning.md)
+
+
 ## Stuff trying
 
 ### Lisp
@@ -76,8 +82,3 @@ Random Try Interesting stuff
 - dynamically creating a class
 - try `__metaclass__`
 - finding diff time, `datetime`, `timedelta`
-
-
-### Reading / Lecture
-- [UX research](./readings/ux.md)
-- [How CSS work](./readings/how-css-work.md)
