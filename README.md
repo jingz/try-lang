@@ -4,7 +4,7 @@ Random Try Interesting stuff
 ### Reading / Lecture
 - [UX research](./readings/ux.md)
 - [How CSS work](./readings/how-css-work.md)
-- [Memory and Learning Facts](./readings/memory_and_leaning.md)
+- [Memory and Learning Facts](./readings/memory_and_learning.md)
 
 
 ## Stuff trying
