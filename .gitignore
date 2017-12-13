@@ -6,6 +6,5 @@ node/node_modules/*
 *node_modules/*
 javascript/phantomjs/*.png
 *venv*
-*.DS_Store
-.DS_Store
 .ipynb_*
+.DS_Store

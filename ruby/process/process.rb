@@ -11,7 +11,6 @@ cid = fork {
   exit
 }
 
-abort
 Process.detach cid
 puts "Im parent #{$$}"
 x = 0
