@@ -31,7 +31,7 @@ class Money(object):
 
 
 
-money = Money(10, 5) 
+money = Money(10, 5)
 print money.display  #=> I have 10 dollars and 5 cents
 
 money.dollars += 10

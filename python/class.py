@@ -14,7 +14,7 @@ class Person(object):
 
     _l = lambda x: x*2
     b = _l(10)
-    print "inside class", b
+    print("inside class", b)
     ll = staticmethod(_l)
     __ll = staticmethod(_l) # private
 
@@ -40,13 +40,13 @@ class Person(object):
     @classmethod
     def some_class_method(self):
         return 'SOME CLASS METHOD'
-    
+
 
 p = Person("Sarunyoo", "XX");
-print p
-print p.fullname
-print Person.ll(6)
-print "call outside class", Person.b
-print Person._firstname
-print Person.xxx()
-print Person.some_class_method()
+print(p)
+print( p.fullname)
+print( Person.ll(6))
+print( "call outside class", Person.b)
+print( Person._firstname)
+print( Person.xxx())
+print( Person.some_class_method())

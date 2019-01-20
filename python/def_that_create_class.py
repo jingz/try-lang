@@ -1,5 +1,5 @@
 class A(object):
-    arg_x = [1,2,3]
+    arg_x = [1, 2, 3]
 
 
 def genclass(name, l):
@@ -8,4 +8,7 @@ def genclass(name, l):
 
 NewClass = genclass('EA', ['test', 'string', 'testx']);
 
-print NewClass.arg_x
+print(NewClass.arg_x)
+
+ea = NewClass()
+print(ea)
