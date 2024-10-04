@@ -1,0 +1,14 @@
+=test
+    text: thing
+
+$tablet: 900px
+
+=mobile
+    @media screen and (max-width: $tablet - 1px)
+    @content
+
+
+div
+    @include test
+    @include mobile
+        what: is it
