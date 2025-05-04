@@ -1,5 +1,5 @@
 {
     "name": "My First NFT Collection",
     "description": "Example of NFT for solana foundation bootcamp.",
-    "image": "https://github.com/CapsE/FreeTokens/blob/main/tokens/Dire-Wolf.svg"
+    "image": "https://raw.githubusercontent.com/CapsE/FreeTokens/refs/heads/main/images/Wolf-2.png"
 }
